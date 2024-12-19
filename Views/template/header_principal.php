@@ -247,7 +247,8 @@
                         <div class="list-inline">
                             <div class="list-inline-item">
 
-                                <a href="pages/shop-wishlist.html" class="text-muted position-relative">
+                                <a href="<?php echo BASE_URL . 'principal/deseo' ?>"
+                                    class="text-muted position-relative">
 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -384,9 +385,9 @@
                     </div>
                     <div class="d-none d-lg-block">
                         <ul class="navbar-nav ">
-                        <li class="nav-item ">
+                            <li class="nav-item ">
                                 <a class="nav-link" href="docs/index.html">
-                                  Inicio
+                                    Inicio
                                 </a>
                             </li>
                             <li class="nav-item dropdown">
@@ -395,21 +396,8 @@
                                     Productos
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="pages/shop-grid.html">Rejilla de Tienda -
-                                            Filtro</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-grid-3-column.html">Rejilla de Tienda
-                                            - 3 columnas</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="pages/shop-list.html">Lista de Tienda -
-                                            Filtro</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-filter.html">Tienda - Filtro</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-fullwidth.html">Tienda Ancha</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-single.html">Tienda Individual</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="pages/shop-wishlist.html">Lista de deseos de
-                                            Tienda</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-cart.html">Carrito de Tienda</a></li>
-                                    <li><a class="dropdown-item" href="pages/shop-checkout.html">Pago de Tienda</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/shop' ?>">Productos de moda</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -418,7 +406,9 @@
                                     Tiendas
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="pages/store-list.html">Lista de Tiendas</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/tiendas' ?>">Lista de Tiendas</a>
+                                    </li>
                                 </ul>
                             </li>
 
@@ -489,20 +479,45 @@
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="docs/index.html">
-                                  Supermercado
+                                    Supermercado
                                 </a>
                             </li>
 
                             <li class="nav-item ">
                                 <a class="nav-link" href="docs/index.html">
-                                   Vender
+                                    Vender
                                 </a>
                             </li>
 
                             <li class="nav-item ">
                                 <a class="nav-link" href="docs/index.html">
-                                   Ayuda
+                                    Ayuda
                                 </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Perfil
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/ordenes' ?>">Ordenes</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/pendiente' ?>">Perdientes</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/completado' ?>">Completado</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/configuracion' ?>">Configuración</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/localizacion' ?>">localizacion</a>
+                                    </li>
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/pagos' ?>">Metodos de pago</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="<?php echo BASE_URL . 'principal/notificaciones' ?>">Notificaciones</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -621,19 +636,19 @@
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link" href="docs/index.html">
-                                  Supermercado
+                                    Supermercado
                                 </a>
                             </li>
 
                             <li class="nav-item ">
                                 <a class="nav-link" href="docs/index.html">
-                                   Vender
+                                    Vender
                                 </a>
                             </li>
 
                             <li class="nav-item ">
                                 <a class="nav-link" href="docs/index.html">
-                                   Ayuda
+                                    Ayuda
                                 </a>
                             </li>
                         </ul>
