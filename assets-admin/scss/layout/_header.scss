@@ -1,0 +1,394 @@
+/**=====================
+  5.3 Header CSS Start
+==========================**/
+
+.left-header {
+  .d-flex {
+    align-items: center;
+  }
+  .welcome-content{
+    span{
+      color: var(--chart-text-color);
+    }
+  }
+
+  h6 { 
+    line-height: 1.6;
+
+    @media (max-width: 1199px) { 
+      width: 160px;
+      overflow: hidden;
+      -webkit-line-clamp: 1; 
+      text-overflow: ellipsis; 
+      white-space: nowrap;
+    }
+
+    @media (max-width: 991px) {
+      width: 120px;
+    }
+
+    @media (max-width: 767px) {
+      width: 66px;
+    }
+  }
+
+  @media (max-width: 892px) {
+    display: none; 
+  }
+ 
+  img {
+    margin-top: -12px;
+    height: 26px;
+  }
+
+  i {
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: -4px;
+  }
+}
+.nav-right{ 
+  .nav-menus{
+    li{ 
+      .input-icon{
+        svg{
+          position: absolute;
+          top: 11px; 
+          left: 15px;
+          [dir="rtl"] & {
+            right: 15px;
+            left: unset;
+          }
+        }
+        &::before{
+          content: "";  
+          top: 8px; 
+          left: 44px;
+          height: 25px;
+          width: 1px;
+          background-color: $light-color;
+          position: absolute;
+          [dir="rtl"] & {
+            right: 44px;
+            left: unset;
+          }
+        }
+        input {
+          background-color: $white; 
+        }
+      } 
+      .input-show{
+        position: relative;
+        input{
+          position: absolute;
+          z-index: 11; 
+          top: 25px;
+          left: 0px;
+          background-color: $white;
+          padding: 12px;
+        }
+        #searchInput{
+          &.show{
+            input{
+              display: block;
+            }
+          }
+          input{ 
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*======= Page Header css ends  ======= */
+
+
+/**======Main Header css Start ======**/
+.offcanvas,
+.offcanvas-bookmark {
+  .page-wrapper {
+    .page-body-wrapper {
+      .page-body {
+        position: relative;
+        filter: blur(5px) grayscale(100%);
+       } 
+    }
+  }
+}
+
+.offcanvas {
+  position: unset;
+  visibility: visible;
+  background: unset;
+  z-index: 2; 
+}
+
+.toggle-sidebar {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;  
+
+  svg {
+    width: $header-wrapper-nav-icon-size;
+    height: $header-wrapper-nav-icon-size;
+    stroke: var(--white);
+  }
+  &:before {
+    content: "";  
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: rgba($white, 0.1); 
+    border-radius: 100%;
+    left: -10px; 
+    z-index: -2; 
+    top: -9px; 
+    transform: scale(0); 
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    &:before {
+      height: 40px;
+      width: 40px;
+      transform: scale(1); 
+      transition: all 0.3s ease;
+    }
+
+    >svg {
+      color: var(--white) !important;
+      stroke: var(--white) !important;
+    }
+  }
+}
+
+.onhover-dropdown {
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    .onhover-show-div {
+      @extend %for-animated-hover-box;
+    }
+  } 
+  &.notification-down{
+    &::before{
+      content: "";
+      top: 0px;
+      left: 55px; 
+      height: 46px;
+      width: 1px;
+      background-color: $light-light-color; 
+      position: absolute;
+    } 
+  } 
+} 
+
+.page-wrapper {
+  .page-body-wrapper{
+    background-color: $body-color;
+  }
+	.page-header {
+    &.close_icon{
+      .header-wrapper{
+        .header-logo-wrapper{
+          .toggle-sidebar{
+            svg {
+              stroke: $dark-gray !important; 
+            }
+          }
+        }
+      }
+    }
+		.header-wrapper {
+			.nav-right {
+				.onhover-show-div {
+
+          .notitications-bar{
+            .user-message{
+              a{
+                color: $theme-body-font-color; 
+              }
+            }
+            .notification-card{
+              a{  
+                color: $theme-body-font-color;
+                &:hover{
+                  color: $primary-color;
+                } 
+              }
+            }
+            ul{
+              gap: 8px; 
+              justify-content: center;
+              padding: 0px !important;
+              align-items: center;
+              li { 
+                &.notification-box{
+                  a{
+                    color: $theme-body-font-color;
+                  }
+                } 
+                &.total{
+                  h6{ 
+                    text-align: -webkit-auto;
+                  }
+                }
+                margin-top: 0px;
+                margin-bottom: 0px;
+                padding: 0px; 
+                &.notification{
+                  border-bottom: 1px solid $light-color;
+                  padding-bottom: 15px;
+                  padding-top: 15px ; 
+                  .notification-data{ 
+                    .product-icon{
+                      height: 40px; 
+                      width: 40px;
+                      border-radius: 6px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      svg{ 
+                        width: 25px; 
+                        height: 25px;
+                        stroke: none !important;
+                      }
+                    }
+                    span{
+                      text-overflow:ellipsis;
+                      overflow:hidden;
+                      display: -webkit-box !important;
+                      -webkit-line-clamp: 1;
+                      -webkit-box-orient: vertical;
+                      white-space: normal;
+                      text-align: -webkit-auto;
+                    }
+                  }
+                  &:last-child{ 
+                    border: none;
+                  }
+                }
+              }
+            }
+            .user-message{
+              ul{
+                li{
+                  padding: 19px 0px !important;
+                  .user-alerts{
+                    display: flex;
+                    align-items: center;
+                    .user-image{ 
+                      height: 34px;
+                      width: 34px; 
+                    }
+                    .user-name{
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 100%;
+                      h6{ 
+                        text-align: start;
+                      }
+                    }
+                  }
+                  // &:last-child{ 
+                  //   padding-bottom: 0px;
+                  // }
+                  &:hover{ 
+                    a{
+                      color: $primary-color;
+                    }
+                  }
+                }
+              }
+            }
+          }  
+				}
+			}
+		}
+	}
+}
+
+.onhover-show-div {
+  top: 80px;
+  position: absolute;
+  z-index: 8;
+  background-color: $white;
+  transition: all linear 0.3s;
+  @extend %for-animated-hover;
+
+  li {
+    a {
+      svg {
+        margin-top: 0 !important;
+
+        path, 
+        line {
+          color: $theme-body-font-color !important;
+        }
+      }
+    }
+  }
+}
+
+/**======Main Header css Ends ======**/
+
+/*=======Mega menu css start=======*/
+.mega-menu {
+  .default-according {
+    .card {
+      .btn-link {
+        font-weight: 500;
+        color: gray;
+      }
+
+      .card-body {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .onhover-show-div {
+    width: 1500px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  div {
+    >div {
+      a {
+        margin-bottom: 0px;
+        display: inline-block;
+        color: $theme-body-sub-title-color;
+      }
+    }
+  }
+
+  .list-unstyled {
+    div {
+      a {
+        padding: 8px 35px 8px 0;
+        transition: $sidebar-transition;
+
+        &:hover {
+          padding: 8px 35px 8px 10px;
+          transition: $sidebar-transition;
+        }
+      }
+    }
+  }
+}
+
+
+
+/*=======Mega menu css end=======*/
+
+/**=====================
+    5.3 Header CSS Ends
+==========================**/

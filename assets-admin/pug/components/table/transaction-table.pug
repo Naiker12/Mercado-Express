@@ -1,0 +1,72 @@
+
+//- ====== Orders Table  ====== -//
+- 
+    var LATEST_TRANSACTION=
+        {
+            header:["Name" , "Date" , "Amount" ,"Status"],
+            body:[
+                {
+                    title:"Darrell Steward",
+                    date:"16 Nov, 2024",
+                    price:"$456.23",
+                    statusColor:"primary",
+                    status:"Complete",
+                },
+                {
+                    title:"Floyd Miles",
+                    date:"22 Jan, 2024",
+                    price:"$550.73",
+                    statusColor:"secondary",
+                    status:"Failed",
+                },
+                {
+                    title:"Ralph Edwards",
+                    date:"31 Dec, 2024",
+                    price:"$785.26",
+                    statusColor:"primary",
+                    status:"Complete",
+                },  
+                {
+                    title:"Jerome Bell",
+                    date:"16 Nov, 2024",
+                    price:"$458.14",
+                    statusColor:"secondary",
+                    status:"Failed",
+                },
+                {
+                    title:"Theresa Webb",
+                    date:"16 Feb, 2024",
+                    price:"$263.24",
+                    statusColor:"primary",
+                    status:"Complete",
+                },
+                {
+                    title:"Courtney Henry",
+                    date:"01 Nov, 2024",
+                    price:"$785.14",
+                    statusColor:"primary",
+                    status:"Complete",
+                },
+            ]  
+        };
+        
+//- ====================
+//- Orders Table 
+//- ====================
+
+table(class=' w-100 tranaction-table')
+    thead 
+        tr 
+            each head in LATEST_TRANSACTION.header
+                th=  head
+    tbody
+        each bodyData in LATEST_TRANSACTION.body 
+            tr
+                td 
+                    div(class="product-name")
+                        a(href="product.html" class=" f-14 f-w-500")=bodyData.title 
+                td(class="f-14 f-w-500")=bodyData.date
+                td(class="f-14 f-w-500")=bodyData.price
+                td
+                    div(class=`txt-${bodyData.statusColor}`)
+                       span(class="f-w-500 f-13")=bodyData.status  

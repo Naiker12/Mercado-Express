@@ -13,7 +13,11 @@
 
 
     <!-- Favicon icon-->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/images/favicon/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo BASE_URL; ?>assets/img/favicon/favicon.ico">
+
+    <!-- LIBRERIA DE ALERTAS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
+
 
 
 
@@ -157,14 +161,14 @@
             <div class="container">
                 <div class="row w-100 align-items-center g-3">
                     <div class="col-xxl-2 col-lg-3">
-                        <a class="navbar-brand d-none d-lg-block" href="index.html">
-                            <img src="<?php echo BASE_URL; ?>assets/images/logo/freshcart-logo.svg"
+                        <a class="navbar-brand d-none d-lg-block" href="<?php echo BASE_URL; ?>">
+                            <img src="<?php echo BASE_URL; ?>assets/img/logo/freshcart-logo.svg"
                                 alt="eCommerce HTML Template">
 
                         </a>
                         <div class="d-flex justify-content-between w-100 d-lg-none">
-                            <a class="navbar-brand" href="#">
-                                <img src="<?php echo BASE_URL; ?>assets/images/logo/freshcart-logo.svg"
+                            <a class="navbar-brand" href="<?php echo BASE_URL; ?>">
+                                <img src="<?php echo BASE_URL; ?>assets/img/logo/freshcart-logo.svg"
                                     alt="eCommerce HTML Template">
 
                             </a>
@@ -257,9 +261,8 @@
                                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
                                         </path>
                                     </svg>
-                                    <span
-                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                                        5
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success" id="btnCantidadDeseo">
+                                        0
                                         <span class="visually-hidden">mensajes no leídos</span>
                                     </span>
                                 </a>
@@ -279,7 +282,7 @@
 
                                 <a class="text-muted position-relative " data-bs-toggle="offcanvas"
                                     data-bs-target="#offcanvasRight" href="#offcanvasExample" role="button"
-                                    aria-controls="offcanvasRight">
+                                    aria-controls="offcanvasRight" id="verCarrito">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="feather feather-shopping-bag">
@@ -287,9 +290,7 @@
                                         <line x1="3" y1="6" x2="21" y2="6"></line>
                                         <path d="M16 10a4 4 0 0 1-8 0"></path>
                                     </svg>
-                                    <span
-                                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
-                                        1
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success" id="btnCantidadCarrito">
                                         <span class="visually-hidden">mensajes no leídos</span>
                                     </span>
                                 </a>
@@ -336,7 +337,7 @@
                 <div class="offcanvas offcanvas-start p-4 p-lg-0" id="navbar-default">
 
                     <div class="d-flex justify-content-between align-items-center mb-2 d-block d-lg-none">
-                        <div><img src="<?php echo BASE_URL; ?>assets/images/logo/freshcart-logo.svg"
+                        <div><img src="<?php echo BASE_URL; ?>assets/img/logo/freshcart-logo.svg"
                                 alt="eCommerce HTML Template"></div>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
@@ -386,7 +387,7 @@
                     <div class="d-none d-lg-block">
                         <ul class="navbar-nav ">
                             <li class="nav-item ">
-                                <a class="nav-link" href="docs/index.html">
+                                <a class="nav-link" href="<?php echo BASE_URL; ?>">
                                     Inicio
                                 </a>
                             </li>
@@ -465,7 +466,7 @@
                                         </div>
                                         <div class="col-lg-3 col-12 mb-4 mb-lg-0">
                                             <div class="card border-0">
-                                                <img src="<?php echo BASE_URL; ?>assets/images/banner/menu-banner.jpg"
+                                                <img src="<?php echo BASE_URL; ?>assets/img/banner/menu-banner.jpg"
                                                     alt="eCommerce HTML Template" class="img-fluid rounded-3">
                                                 <div class="position-absolute ps-6 mt-8">
                                                     <h5 class=" mb-0 ">No te pierdas esta <br>oferta hoy.</h5>

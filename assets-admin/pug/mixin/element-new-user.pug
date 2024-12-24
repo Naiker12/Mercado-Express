@@ -1,0 +1,62 @@
+//- =====================
+//-  New-User
+//- =====================
+-
+    var NEW_USER= 
+      [
+        {
+           id: "dropdownMenuButtonicon31",
+           image:"22.png",
+           name:"Smith John",
+           country: "India",
+        },
+        {
+           id: "dropdownMenuButtonicon32",
+           image:"28.png",
+           name:"Robert Fox",
+           country: "Afghanistan",
+        },
+        {
+           id: "dropdownMenuButtonicon33",
+           image:"26.png",
+           name:"Darlene Robtson",
+           country: "Georgia",
+        },
+        {
+           id: "dropdownMenuButtonicon34",
+           image:"24.png",
+           name:"Floyd Miles",
+           country: "Pakistan",
+        },
+        {
+           id: "dropdownMenuButtonicon35",
+           image:"49.png",
+           name:"Jacob Jones",
+           country: "Monaco",
+        },
+      ]
+
+//- ==================
+//- User-message
+//- ==================
+
+mixin new-user(data)
+  ul 
+    each item in data
+        li
+            div(class="space-common d-flex user-name")
+                img(class="img-40 rounded-circle img-fluid me-2" src=`../assets/images/user/${item.image}` alt=`user`)
+                div(class="common-space w-100")
+                    div
+                        h6 
+                            a(href="user-profile.html" class="f-w-500 f-14 ")=item.name
+                        span(class="f-light f-w-500 f-12")=item.country
+                    div(class="product-sub")
+                        .dropdown 
+                          div(id=item.id data-bs-toggle='dropdown', aria-expanded='false' role="menu")
+                            svg(class="invoice-icon") 
+                                use(href=`../assets/svg/icon-sprite.svg#more-vertical`)
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby=`${item.id}`)
+                            span.dropdown-item Last Month 
+                            span.dropdown-item Last Week
+                            span.dropdown-item Last Day 

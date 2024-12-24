@@ -1,0 +1,91 @@
+
+//- =====================
+//-  User Message
+//- =====================
+-
+    var USER_MESSAGE= 
+      [
+         {
+            id: "dropdownMenuButtonicon21",
+            image:"39.png",
+            name:"Maren Ross",
+            statusColor: "warning",
+            subTitle: "Hey, What’s today update ?",
+         },
+         {
+            id: "dropdownMenuButtonicon22",
+            image:"40.png",
+            name:"Brooklyn Simmons", 
+            subTitle: "I know it will work.",
+         },
+         {
+            id: "dropdownMenuButtonicon23",
+            image:"41.png",
+            name:"Floyd Miles",
+            statusColor: "warning",
+            subTitle: "Sir, Can remove part in des...",
+         },
+         {
+            id: "dropdownMenuButtonicon24",
+            image:"42.png",
+            name:"Dianne Russell",
+            subTitle: "So, what is my next work ?",
+         },
+         {
+            id: "dropdownMenuButtonicon25",
+            image:"43.png",
+            name:"Darlene Robertson",
+            statusColor: "warning",
+            subTitle: "Can we add that here ?",
+         },
+         {
+            id: "dropdownMenuButtonicon26",
+            image:"44.png",
+            name:"Jenny Wilson",
+            subTitle: "Hey, What’s today update ?",
+         },
+         {
+            id: "dropdownMenuButtonicon28",
+            image:"45.png",
+            name:"Ralph Edwards",
+            statusColor: "warning",
+            subTitle: "ok, send it.",
+         },
+         {
+            id: "dropdownMenuButtonicon29",
+            image:"15.png",
+            name:"Ronald Richards",
+            statusColor: "warning",
+            subTitle: "Thank you !!!",
+         },
+         {
+            id: "dropdownMenuButtonicon30",
+            image:"47.png",
+            name:"Courtney Henry",
+            subTitle: "No, you’ve to do one more variant.",
+         },
+      ]
+//- ==================
+//- User-message
+//- ==================
+mixin  user-message(data)
+  ul 
+    each item in data
+        li
+            div(class="activity-log")
+                img(class="activity-log-img rounded-circle img-fluid me-2" src=`../assets/images/user/${item.image}` alt=`user`)
+                div(class=`status bg-${item.statusColor}`)
+                div(class="activity-name")
+                    div
+                        h6 
+                            a(href="user-profile.html" class="f-w-500 f-14")=item.name
+                        span(class="f-light f-w-500 f-12 ")=item.subTitle
+                    div(class="product-sub")
+                        .dropdown
+                          div(id=item.id data-bs-toggle='dropdown', aria-expanded='false' role="menu")
+                            svg(class="invoice-icon")
+                                use(href="../assets/svg/icon-sprite.svg#more-vertical")
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby=`${item.id}`)
+                            span.dropdown-item Last Month
+                            span.dropdown-item Last Week
+                            span.dropdown-item Last Day  

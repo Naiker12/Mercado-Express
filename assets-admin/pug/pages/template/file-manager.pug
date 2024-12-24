@@ -1,0 +1,253 @@
+- var chat_menu             = true;
+- var theme_customizer      = true;
+- var typeahead             = true;
+- var typeahead_search      = true;
+- var page_feather_icon     = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+
+  
+ 
+//- all mixin  
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-6
+                  h4 
+                    | File Manager
+                .col-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html')                                        
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
+                    li.breadcrumb-item Apps
+                    li.breadcrumb-item.active  File Manager
+
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xl-3.box-col-30
+                .md-sidebar.job-sidebar
+                    a.btn.btn-primary.md-sidebar-toggle(href="javascript:void(0)")
+                      | file filter
+                    .md-sidebar-aside.custom-scrollbar
+                      .file-sidebar
+                        .card 
+                          .card-body  
+                            ul
+                              li  
+                                .btn.btn-primary
+                                  i(data-feather="home")                                     
+                                  | Home 
+                              li
+                                .btn.btn-light
+                                  i(data-feather="folder")
+                                  | All    
+                              li
+                                .btn.btn-light
+                                  i(data-feather="clock")
+                                  | Recent    
+                              li
+                                .btn.btn-light
+                                  i(data-feather="star")
+                                  | Starred      
+                              li
+                                .btn.btn-light
+                                  i(data-feather="alert-circle")
+                                  | Recovery        
+                              li
+                                .btn.btn-light
+                                  i(data-feather="trash-2")
+                                  | Deleted 
+                            hr
+                            ul
+                              li
+                                .btn.btn-outline-primary
+                                  i(data-feather="database")    
+                                  | Storage   
+                                .m-t-15
+                                  .progress.sm-progress-bar.mb-3
+                                    .progress-bar.bg-primary(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                  h6.f-w-500 25 GB of 100 GB used
+                            hr
+                            ul
+                              li
+                                .btn.btn-outline-primary
+                                  i(data-feather="grid")    
+                                  | Pricing plan
+                              li  
+                                .pricing-plan
+                                    h6 Trial Version 
+                                    h5 FREE
+                                    p 100 GB Space
+                                    .btn.btn-outline-primary.btn-xs
+                                      | Selected
+                                    img.bg-img(src='../assets/images/dashboard/folder.png', alt='')   
+              .col-xl-9.col-md-12.box-col-70
+                .file-content
+                  .card
+                    .card-header
+                      .d-md-flex
+                        form.form-inline(action='#' method='get')
+                          .form-group.d-flex.align-items-center.mb-0                                       
+                            i.fa.fa-search
+                            input.form-control-plaintext(type='text' placeholder='Search...')
+                        .flex-grow-1.text-end.d-md-block.d-none
+                          form.d-inline-flex(action='#', method='POST', enctype='multipart/form-data', name='myForm')
+                            .btn.btn-primary(onclick='getFile()') 
+                              i(data-feather="plus-square")
+                              | Add New
+                            div(style='height: 0px;width: 0px; overflow:hidden;')
+                              input#upfile(type='file', onchange='sub(this)')
+                          .btn.btn-outline-primary.ms-2
+                            i(data-feather="upload")    
+                            | Upload  
+                    .card-body.file-manager
+                      h5.mb-2 Quick Access 
+                      ul.quick-file.d-flex.flex-row
+                        li
+                          .quick-box
+                            i.fa.fa-youtube-play.font-danger
+                          h6 Videos
+                        li
+                          .quick-box
+                            i.fa.fa-th.font-info
+                          h6 Apps
+                        li
+                          .quick-box
+                            i.fa.fa-file-text-o.font-secondary
+                          h6 Document
+                        li
+                          .quick-box
+                            i.fa.fa-music.font-warning
+                          h6 Music
+                        li
+                          .quick-box
+                            i.fa.fa-download.font-primary
+                          h6 Download
+                        li
+                          .quick-box
+                            i.fa.fa-folder.font-info
+                          h6 Folder
+                        li
+                          .quick-box
+                            i.fa.fa-file-archive-o.font-secondary
+                          h6 Zip File
+                        li
+                          .quick-box
+                            i.fa.fa-trash.font-danger
+                          h6 Trash
+                      h5.mt-4.mb-2 Folders
+                      ul.folder
+                        li.folder-box
+                          .d-block
+                            i.f-44.fa.fa-file-archive-o.txt-warning
+                            i.fa.fa-ellipsis-v.me-0.f-14.ellips
+                            .mt-3   
+                              h6 Tivo admin
+                              p 20 file
+                                span.pull-right 
+                                  i.fa.fa-clock-o  
+                                  |  2 Hour ago
+                        li.folder-box
+                          .d-block
+                            i.f-44.fa.fa-folder.txt-warning
+                            i.fa.fa-ellipsis-v.me-0.f-14.ellips
+                            .mt-3   
+                              h6 Viho admin
+                              p 14 file
+                                span.pull-right  
+                                  i.fa.fa-clock-o  
+                                  |  3 Hour ago
+                        li.folder-box
+                          .d-block
+                            i.f-44.fa.fa-file-archive-o.txt-warning
+                            i.fa.fa-ellipsis-v.me-0.f-14.ellips
+                            .mt-3   
+                              h6 Unice admin
+                              p 15 file
+                                span.pull-right 
+                                  i.fa.fa-clock-o  
+                                  |  3 Day ago
+                        li.folder-box
+                          .d-block
+                            i.f-44.fa.fa-folder.txt-warning
+                            i.fa.fa-ellipsis-v.me-0.f-14.ellips
+                            .mt-3   
+                              h6 Koho admin
+                              p 10 file
+                                span.pull-right 
+                                  i.fa.fa-clock-o  
+                                  |  1 Day ago
+                      h5.mt-4.mb-2 Files 
+                      ul.d-flex.flex-row.files-content
+                        li.folder-box.d-flex.align-items-center
+                          .d-flex.align-items-center.files-list
+                            .flex-shrink-0.file-left
+                              i.f-22.fa.fa-folder.font-info
+                            .flex-grow-1.ms-3
+                              h6 Logo.psd
+                              p 7 Hour ago, 2.0 MB
+                        li.folder-box.d-flex.align-items-center
+                          .d-flex.align-items-center.files-list
+                            .flex-shrink-0.file-left
+                              i.f-22.fa.fa-file-excel-o.font-success
+                            .flex-grow-1.ms-3
+                              h6 Backend.xls
+                              p 2 Day ago, 3.0 GB
+                        li.folder-box.d-flex.align-items-center
+                          .d-flex.align-items-center.files-list
+                            .flex-shrink-0.file-left
+                              i.f-22.fa.fa-file-archive-o.font-warning
+                            .flex-grow-1.ms-3
+                              h6 Project.zip
+                              p 1 Day ago, 1.9 GB
+                        li.folder-box.d-flex.align-items-center
+                          .d-flex.align-items-center.files-list
+                            .flex-shrink-0.file-left
+                              i.f-22.fa.fa-folder.font-primary
+                            .flex-grow-1.ms-3
+                              h6 Report.txt
+                              p 1 Day ago, 0.9 KB
+ 
+
+
+          // Container-fluid Ends
+        include ../../components/footer
+      .icon-hover-bottom.p-fixed.fa-fa-icon-show-div.opecity-0
+        .container-fluid
+          .row
+            .icon-popup
+              .close-icon
+                i.icofont.icofont-close
+              .icon-first
+                i#icon_main
+              .icon-class
+                label.icon-title data-feather
+                span#fclass1
+              .icon-last.icon-last
+                label.icon-title Markup
+                .form-inline
+                  .form-group
+                    input#input_copy.inp-val.form-control.m-r-10(type='text', value='', readonly='readonly')
+                    button.btn.btn-primary.notification(onclick='myFunction()') Copy text
+    include ../../components/footer-files

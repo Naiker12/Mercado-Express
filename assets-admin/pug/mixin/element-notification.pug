@@ -1,0 +1,55 @@
+//- =====================
+//-  Notification
+//- =====================
+-
+    var NOTIFICATION_BAR= 
+      [
+         {
+            image:"3.jpg",
+            name:"Robert D. Hambly",
+            appName:"Hello Miss...😊",
+            statusBg:"light-primary",
+            notificationTime:"44 sec", 
+         },
+         {
+            image:"7.jpg",
+            name:"Courtney C. Strang",
+            appName:"Wishing You a Happy Birthday Dear.. 🥳🎊",
+            statusBg:"light-warning",
+            notificationTime:"52 min", 
+         },
+         {
+            image:"5.jpg",
+            name:"Raye T. Sipes",
+            appName:"Hello Dear!! This Theme Is Very beautiful",
+            statusBg:"light-light",
+            notificationTime:"48 min",  
+         },
+         {
+            image:"6.jpg",
+            name:"Henry S. Miller",
+            appName:"You’re older today than yesterday, happy birthday!",
+            statusBg:"light-secondary",
+            notificationTime:"3 min", 
+         },
+      ]
+
+//- ==================
+//- notification
+//- ==================
+mixin  notification(data)
+  ul 
+    each item in data
+        li(class="notification d-flex w-100 justify-content-between align-items-center")
+          div(class="d-flex w-100 notification-data justify-content-center align-items-center gap-2")
+            div(class="user-alerts").flex-shrink-0
+              img(class="rounded-circle img-fluid img-40" src=`../assets/images/dashboard/user/${item.image}` alt=`user`)
+            div.flex-grow-1
+              div(class="common-space user-id w-100")
+                  div.common-space.w-100 
+                      a(href="../template/private-chat.html" class="f-w-500 f-12")=item.name
+              div
+                span(class="f-w-500 f-light f-12")=item.appName 
+            span(class="f-light f-w-500 f-12")=item.notificationTime 
+            //- svg
+            //-   use(href="../assets/svg/icon-sprite.svg#more-vertical")

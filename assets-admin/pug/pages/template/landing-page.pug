@@ -1,0 +1,437 @@
+- var landing_sticky        = true;
+- var wow                   = true;
+- var animate               = true;
+- var tooltip               = true;
+- var jarallax_libs         = true;
+- var landing_icon          = true;
+- var slick                 = true;
+- var landing_slider        = true;
+- var header_slider         = true;
+- var landing_font          = true;
+- var owlcarousel           = true;
+- var page_owlcarousel      = true;
+
+doctype html
+html(lang='en')
+  include ../../components/landing-header
+  body.landing-page
+    include ../../components/taptop
+    // page-wrapper Start
+    div.landing-page
+      span.cursor
+        span.cursor-move-inner
+          span.cursor-inner
+        span.cursor-move-outer
+          span.cursor-outer 
+      // Page Body Start
+      .landing-home#home
+        .container-fluid 
+          .sticky-header
+            header
+              nav#sidebar-menu.navbar.navbar-b.navbar-dark.navbar-trans.navbar-expand-xl.fixed-top.nav-padding
+                a.navbar-brand.p-0(href='#')
+                  img.img-fluid(src='../assets/images/landing/landing_logo.png', alt='')
+                button.navbar-toggler.navabr_btn-set.custom_nav(type='button', data-bs-toggle='collapse', data-bs-target='#navbarDefault', aria-controls='navbarDefault', aria-expanded='false', aria-label='Toggle navigation')
+                  span
+                  span
+                  span
+                #navbarDefault.navbar-collapse.justify-content-center.collapse.hidenav(style='')
+                  ul.navbar-nav.navbar_nav_modify#scroll-spy
+                    li.nav-item
+                      a.nav-link.active(href='#home') Home
+                    li.nav-item 
+                      a.nav-link#page(href='#demo') Page
+                    li.nav-item
+                      a.nav-link#Feature(href='#framework') Feature
+                    li.nav-item
+                      a.nav-link#Portfolio(href='https://themeforest.net/user/pixelstrap/portfolio' target="_blank") Portfolio
+                    li.nav-item
+                      a.nav-link(href='https://docs.google.com/forms/d/e/1FAIpQLSe6hKUXw_By-pg7yabL0FxoTM02ZPTxoXy8PE3yboRuUCuyeA/viewform' target="_blank") Hire Us
+                    li.nav-item
+                      a.nav-link#documentation(href='https://docs.pixelstrap.net/admin/riho/document/' target="_blank") Documentation
+                .buy-btn
+                  a.nav-link.js-scroll(href='https://themeforest.net/user/pixelstrap/portfolio' target="_blank") Buy Now
+          .row.justify-content-center
+            .col-lg-8.col-sm-10
+              .best-selling
+                img.img-fluid(src="../assets/images/landing/selling-product.png" alt="selling-product")           
+                div.img-shadow
+              .nft-marketplace 
+                img.img-fluid(src="../assets/images/landing/nft-marketplace.png" alt="nft-marketplace")           
+                div.nft-marketplace-shadow
+              .content.text-center
+                div
+                  h1.text-center The Premium Choice
+                    span.d-flex.align-items-center.justify-content-center.pt-2.sub-content
+                      span Admin
+                      button.animate-button-slide
+                        span.notification-slider
+                          span.d-flex.h-100
+                            span.mb-0.f-w-400 
+                              span.font-primary Ecommerce
+                            i.icon-arrow-top-right.f-light 
+                          span.d-flex.h-100
+                            span.mb-0.f-w-400
+                              span.f-light PROJECT
+                          span.d-flex.h-100  
+                            span.mb-0.f-w-400
+                              span.f-light Default
+                      span HTML Template
+                  div.arrow-animate
+                    svg
+                      use(href="../assets/svg/icon-sprite.svg#animated-arrow") 
+              div.user-content 
+                span.text-center The incredible and user-friendly HTML was created using flexible, contemporary, and strong unique parts.
+              div.star-animate 
+                img.img-fluid(src="../assets/images/landing/Vector.png" alt="Vector")
+              div.screen-1  
+                img.img-fluid(src="../assets/images/landing/demo/dashboard-1.png" alt="dashboard-img")  
+              .screen-2 
+                img.img-fluid.sidebar-cuts-image(src="../assets/images/landing/sidebarcuts.png" alt="sidebarcuts")
+                div.screen-sidebar
+              .total-revenue-img
+                img.img-fluid(src="../assets/images/landing/totalrevenue.png" alt="totalrevenue") 
+                div.total-revenue-shadow 
+              .star-img 
+                img.img-fluid.start-animate.fa-spin(src="../assets/images/landing/star.png" alt="star")
+              .new-user-img
+                img.img-fluid(src="../assets/images/landing/newuser.png" alt="new-user")
+                div.new-user-shadow 
+              .star-img-left   
+                img.img-fluid.start-animate-rotate.fa-spin(src="../assets/images/landing/star.png" alt="star")
+      // demo section  
+      section#demo.demo-section.section-py-space
+        .title.text-center
+          h5 Trending & Clean Design Collection
+          h2.mb-lg-2.mb-0 Creative & Unique Admin Layout
+        .container 
+          .row.demo-block.demo-imgs
+            .col-lg-4.col-sm-6
+              .demo-box.dashboard-images
+                .layout-name
+                  .riho-demo-img
+                    ul.dot-group 
+                      li
+                      li
+                      li
+                  a(href="index.html" target='_blank') Default Dashboard
+                .img-wrraper
+                  a(href="index.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/demo/1.jpg" alt="")
+            .col-lg-4.col-sm-6
+              .demo-box.dashboard-images
+                .layout-name
+                  .riho-demo-img
+                    ul.dot-group 
+                      li
+                      li
+                      li
+                  a(href="dashboard-02.html" target='_blank') Ecommerce Dashboard
+                .img-wrraper
+                  a(href="dashboard-02.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/demo/2.jpg" alt="")
+            .col-lg-4.col-sm-6
+              .demo-box.dashboard-images
+                .layout-name
+                  .riho-demo-img
+                    ul.dot-group 
+                      li
+                      li
+                      li
+                  a(href="dashboard-03.html" target='_blank') Project Dashboard
+                .img-wrraper 
+                  a(href="dashboard-03.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/demo/3.jpg" alt="")
+     
+      //frameworks start
+      section.framework.section-py-space.light-bg
+        .container-lg.container-fluid 
+          .row 
+            .col-sm-12.wow.pulse
+              .title.text-center 
+                h5 10+ frameworks available
+                h2.mb-lg-2.mb-0 Top Frameworks
+            .col-sm-12.framworks 
+              #pills-tabContent.tab-content
+                #pills-home.tab-pane.fade.show.active(role='tabpanel')
+                  ul.framworks-list
+                    li.box.wow.fadeInUp
+                      div
+                        img(src='../assets/images/landing/icon/html/bootstrap.png' alt='')
+                      h5.mb-0.f-w-600 Bootstrap 5
+                    li.box.wow.fadeInUp 
+                      div
+                        img(src='../assets/images/landing/icon/html/css.png' alt='')
+                      h5.mb-0.f-w-600 CSS
+                    li.box.wow.fadeInUp
+                      div
+                        img(src='../assets/images/landing/icon/html/sass.png' alt='')
+                      h5.mb-0.f-w-600 Sass
+                    li.box.wow.fadeInUp
+                      div
+                        img(src='../assets/images/landing/icon/html/pug.png' alt='')
+                      h5.mb-0.f-w-600 Pug
+                    li.box.wow.fadeInUp
+                      div
+                        img(src='../assets/images/landing/icon/html/npm.png' alt='')
+                      h5.mb-0.f-w-600 NPM
+                    li.box.wow.fadeInUp
+                      div
+                        img(src='../assets/images/landing/icon/html/charts.png' alt='')
+                      h5.mb-0.f-w-600 Charts
+                    li.box.wow.fadeInUp
+                      div
+                        img(src='../assets/images/landing/icon/html/gulp.png' alt='')
+                      h5.mb-0.f-w-600 Gulp
+                    li.box.wow.fadeInUp
+                      div
+                        img(src='../assets/images/landing/icon/html/web-pack.png' alt='')
+                      h5.mb-0.f-w-600 Web pack
+                    li.box.wow.bounceIn
+                      div
+                        img(src='../assets/images/landing/icon/html/kit.png' alt='')
+                      h5.mb-0.f-w-600 Starter Kit
+                    li.box.wow.bounceIn
+                      div
+                        img(src='../assets/images/landing/icon/html/uikits.png' alt='')
+                      h5.mb-0.f-w-600 40+ UI Kits
+                    li.box.wow.bounceIn
+                      div
+                        img(src='../assets/images/landing/icon/html/builders.png' alt='')
+                      h5.mb-0.f-w-600 Builders
+                    li.box.wow.bounceIn
+                      div
+                        img(src='../assets/images/landing/icon/html/iconset.png' alt='')
+                      h5.mb-0.f-w-600 11 Icon Sets
+                    li.box.wow.bounceIn 
+                      div
+                        img(src='../assets/images/landing/icon/html/forms.png' alt='')
+                      h5.mb-0.f-w-600 Forms
+                    li.box.wow.bounceIn
+                      div
+                        img(src='../assets/images/landing/icon/html/table.png' alt='')
+                      h5.mb-0.f-w-600 Tables
+                    li.box.wow.bounceIn 
+                      div
+                        img(src='../assets/images/landing/icon/html/apps.png' alt='')
+                      h5.mb-0.f-w-600 17+ Apps
+  
+      //Applications start
+      section#Applications.application-section.section-py-space.application-sec
+        .title.text-center
+          h5 Usefull Application
+          h2.mb-lg-2.mb-0 Fast & Powerful Applications 
+        .container 
+          .row.demo-block 
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper 
+                  a(href="social-app.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/1.jpg" alt="")
+                .demo-detail         
+                  .demo-title            
+                    a.btn.btn-primary(href="social-app.html" target='_blank') Social App
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box 
+                .img-wrraper
+                  a(href="knowledgebase.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/2.jpg" alt="")
+                .demo-detail
+                  .demo-title 
+                    a.btn.btn-primary(href="knowledgebase.html" target='_blank') Knowledgebase                           
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box 
+                .img-wrraper
+                  a(href='support-ticket.html' target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/3.jpg" alt="")
+                .demo-detail                        
+                  .demo-title
+                    a.btn.btn-primary(href="support-ticket.html" target='_blank') Support Ticket                           
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper 
+                  a(href="letter-box.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/4.jpg" alt="")
+                .demo-detail                        
+                  .demo-title
+                    a.btn.btn-primary(href="letter-box.html" target='_blank') Email Dashboard                           
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper
+                  a(href='to-do.html' target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/5.jpg" alt="")
+                .demo-detail                  
+                  .demo-title                   
+                    a.btn.btn-primary(href="to-do.html" target='_blank') To-Do
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper
+                  a(href="job-cards-view.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/6.jpg" alt="")
+                .demo-detail                        
+                  .demo-title
+                    a.btn.btn-primary(href="job-cards-view.html" target='_blank') Job Search                           
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper
+                  a(href="product.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/7.jpg" alt="")
+                .demo-detail                        
+                  .demo-title
+                    a.btn.btn-primary(href="product.html" target='_blank') Ecommerce                           
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper
+                  a(href="kanban.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/8.jpg" alt="")
+                .demo-detail                        
+                  .demo-title
+                    a.btn.btn-primary(href="kanban.html" target='_blank') Kanban                           
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper
+                  a(href="file-manager.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/9.jpg" alt="")
+                .demo-detail                        
+                  .demo-title
+                    a.btn.btn-primary(href="file-manager.html" target='_blank') File Manager                           
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper
+                  a(href="projects.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/10.jpg" alt="")
+                .demo-detail                        
+                  .demo-title
+                    a.btn.btn-primary(href="projects.html" target='_blank') Project 
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box 
+                .img-wrraper
+                  a(href="contacts.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/11.jpg" alt="")
+                .demo-detail                        
+                  .demo-title
+                    a.btn.btn-primary(href="contacts.html" target='_blank') Contacts                           
+            .col-xl-4.col-lg-4.col-sm-6.wow.pulse
+              .app-box
+                .img-wrraper
+                  a(href="private-chat.html" target='_blank')
+                    img.img-fluid(src="../assets/images/landing/application/12.jpg" alt="")
+                .demo-detail
+                  .demo-title
+                    a.btn.btn-primary(href="private-chat.html" target='_blank') Chat
+      
+      //choose Riho 
+      section#framework.section-py-space.feature-section 
+        .container
+          .row
+            .col-sm-12.wow.pulse 
+              .title.text-center
+                h5 Why you choose Riho
+                h2.mb-lg-2.mb-0 Unique Features 
+          .row.g-4
+            .col-xxl-3.col-lg-4.col-sm-6.mb-4
+              .feature-box.common-card.bg-feature 
+                .feature-icon.bg-white
+                  div
+                    img(src="../assets/images/landing/feature-icon/1.svg", alt="feature-icon")
+                h5.text-center Quality & Clean Code
+                p.mb-0.f-light All you need to know of using clean code as a manager to make your team and your software awesome.
+            .col-xxl-3.col-lg-4.col-sm-6
+              .feature-box.common-card.bg-feature
+                .feature-icon.bg-white
+                  div
+                    img(src="../assets/images/landing/feature-icon/2.svg", alt="feature-icon")
+                h5.text-center Bootstrap v5.0 
+                p.mb-0.f-light Powerful feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system.
+            .col-xxl-3.col-lg-4.col-sm-6  
+              .feature-box.common-card.bg-feature
+                .feature-icon.bg-white 
+                  div
+                    img(src="../assets/images/landing/feature-icon/3.svg", alt="feature-icon")
+                h5.text-center Handmade Icons
+                p.mb-0.f-light let’s learn how to svg icons in riho admin template, handmade icons different materials.
+            .col-xxl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card.bg-feature
+                .feature-icon.bg-white 
+                  div
+                    img(src="../assets/images/landing/feature-icon/4.svg", alt="feature-icon")
+                h5.text-center Limitless Components
+                p.mb-0.f-light The limitless layout collection and UI kit biggest collection of layouts for web design.
+            .col-xxl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card.bg-feature
+                .feature-icon.bg-white 
+                  div
+                    img(src="../assets/images/landing/feature-icon/5.svg", alt="feature-icon")
+                h5.text-center Easy Customizable
+                p.mb-0.f-light Easy Step-By-Step Guide for Beginners.customize your layout, settings and content.
+            .col-xxl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card.bg-feature
+                .feature-icon.bg-white 
+                  div
+                    img(src="../assets/images/landing/feature-icon/6.svg", alt="feature-icon")
+                h5.text-center Responsive 
+                p.mb-0.f-light Use Responsive Design to Connect with all Device designing your website for mobile devices.
+            .col-xxl-3.col-lg-4.col-sm-6
+              .feature-box.common-card.bg-feature
+                .feature-icon.bg-white
+                  div
+                    img(src="../assets/images/landing/feature-icon/7.svg", alt="feature-icon")
+                h5.text-center Premium Support
+                p.mb-0.f-light We are always be their for your support and you are facing some issues you can create ticket.
+            .col-xxl-3.col-lg-4.col-sm-6  
+              .feature-box.common-card.bg-feature
+                .feature-icon.bg-white
+                  div
+                    img(src="../assets/images/landing/feature-icon/8.svg", alt="feature-icon")
+                h5.text-center Colors Options
+                p.mb-0.f-light Riho provide unlimited main color option.other colors you can change easily using scss variables.
+     
+      section.unique-cards.section-py-space.light-bg.position-relative
+        .support-title
+          h2 we give it as we think that excellent support is needed
+          p “fast issue resolution, and dedicated experts for a seamless experience”
+          div.premium-button 
+            a(href='https://support.pixelstrap.com/portal/en/signin' target="_blank").txt-light.btn.bg-primary.f-w-700.support-button
+              | Premium Support
+        div.pricing-section
+          .container  
+            .row.align-items-center
+              .col-12.support-img  
+                img.img-fluid(src='../assets/images/landing/unique.png' alt='')  
+                h4 Premium Support
+                div.license-title 
+                  h3 Our License
+        .marquee
+          .marquee-name 
+            p.big-title Premium Support. Our License . Premium Support .
+      section#footer.landing-footer.section-py-space
+        .custom-container
+          .row.p-0.m-0
+            .col-12 
+              .footer-contain
+                .rating-wrraper
+                  img.img-fluid(src="../assets/images/logo/logo.png" alt="logo")
+                h2.f-w-600 "Riho Globally Trusted HTML Admin Theme"
+                p.f-w-500 Copyright 2024-25 © Riho All rights reserved.
+                ul.star-rate 
+                  li
+                    i.fa.fa-star.font-warning
+                  li
+                    i.fa.fa-star.font-warning
+                  li
+                    i.fa.fa-star.font-warning
+                  li
+                    i.fa.fa-star.font-warning    
+                  li 
+                    i.fa.fa-star.font-warning 
+                .btn-footer  
+                  a(class="btn btn-lg btn-primary" target="_blank" href="index.html" data-bs-original-title="" title="") Check Now
+                  a(class="btn btn-lg btn-secondary" target="_blank" href=" https://themeforest.net/user/pixelstrap/portfolio" data-bs-original-title="" title="") Buy Now
+                  a(class="btn btn-lg btn-success" target="_blank" href="https://themeforest.net/user/pixelstrap/portfolio" data-bs-original-title="" title="") Rate Us
+
+    include ../../components/landing-footer-files 
+
+
+
+
+    

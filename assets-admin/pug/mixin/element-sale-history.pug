@@ -1,0 +1,51 @@
+//- =====================
+//-  sale-data-history
+//- =====================
+-
+    var SALE_HISTORY= 
+      [
+         {
+            name:"Oxford shirt with rolled sleeve",
+            state: "United States",
+            price: "₹1500.14",
+            time: "50 min ago",
+         },
+         {
+            name:"Jordans 1 high neck tshirt",
+            state: "Canada",
+            price: "₹1800.87",
+            time: "40 min ago",
+         },
+         {
+            name:"Graphic Print Men Round Neck Whi...",
+            state: "United States",
+            price: "₹2000.84",
+            time: "35 min ago",
+         },
+         {
+            name:"Full Sleeve Solid Women Denim Jac...",
+            state: "Australia",
+            price: "₹1500.14",
+            time: "50 min ago",
+         },
+         {
+            name:"Slim Women Black Jeans",
+            state: "UK",
+            price: "₹780.25",
+            time: "28 min ago",
+         },
+      ]
+
+//- ==================
+//- sale-history
+//- ==================
+mixin sale-history(data)
+    ul
+        each item in data
+            li(class="sale-history-card")
+                div(class="history-price")
+                    a(class="f-w-500 f-14 " href="category.html").mb-0=item.name
+                    span.mb-0(class="txt-primary f-w-600 f-16")=item.price
+                div(class="state-time") 
+                    span(class="f-w-500 f-14 f-light").mb-0=item.state
+                    span(class="f-w-400 f-14 f-light")=item.time

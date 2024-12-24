@@ -1,0 +1,278 @@
+- var theme_customizer      = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var animate               = true;
+- var scrollbar             = true;
+  
+ 
+//- all mixin  
+include ../../mixin/mixin
+
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      include ../../components/header 
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-6
+                  h4
+                    | Detailed Course
+
+                .col-6
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html')                                        
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
+                    li.breadcrumb-item Learning 
+                    li.breadcrumb-item.active Detailed Course
+          // Container-fluid starts
+          .container-fluid
+            .row
+              .col-xl-9.xl-60.order-xl-0.order-1.box-col-12.card
+                .blog-single.card-body
+                  .blog-box.blog-details
+                    img.img-fluid.w-100(src='../assets/images/faq/learning-1.png', alt='blog-main')
+                    .blog-details
+                      ul.blog-social
+                        li 25 July 2022
+                        li
+                          i.icofont.icofont-user
+                          | Mark 
+                          span Jecno 
+                        li
+                          i.icofont.icofont-thumbs-up
+                          | 02
+                          span Hits
+                        li
+                          i.icofont.icofont-ui-chat
+                          | 598 Comments
+                      h4.f-w-500 
+                        | Knowledge can be defined as awareness of facts or as practical skills. there is wide agreement among philosophers that it is a form of true belief.
+                      .single-blog-content-top
+                        p
+                          | Knowledge can be defined as awareness of facts or as practical skills, and may also refer to familiarity with objects or situations. Knowledge of facts, also called propositional knowledge, is often defined as true belief that is distinct from opinion or guesswork by virtue of justification. While there is wide agreement among philosophers that it is a form of true belief, many controversies in philosophy focus on justification: whether it is needed at all, how to understand it, and whether something else besides it is needed.
+                        p 
+                          | Knowledge can be produced in many different ways. The most important source is perception, which refers to the usage of the five senses. Many theorists also include introspection as a source of knowledge, not of external physical objects, but of one's own mental states. Other sources often discussed include memory, rational intuition, inference, and testimony. According to foundationalism, some of these sources are basic in the sense that they can justify beliefs without depending on other mental states. This claim is rejected by coherentists.
+                  section.comment-box 
+                    h4 Comment
+                    hr
+                    ul
+                      li
+                        .media.align-self-center
+                          img.align-self-center(src='../assets/images/blog/comment.jpg', alt='Generic placeholder image')
+                          .media-body
+                            .row
+                              .col-md-4.xl-100
+                                h6.mt-0 
+                                  | Jolio Mark
+                                  span  ( Designer )
+                              .col-md-8.xl-100
+                                ul.comment-social.float-start.float-md-end.learning-comment
+                                  li
+                                    i.icofont.icofont-thumbs-up 
+                                    | 02 Hits
+                                  li
+                                    i.icofont.icofont-ui-chat
+                                    | 598 Comments
+                            p
+                              | The best thing is location and drive through the forest. The resort is 35km from Ramnagar. The gardens are well kept and maintained. Its a good place for relaxation away from the city noise. The staff is very friendly and overall we had a really good & fun time, thanks to staff member - Bhairav, Rajat, Gunanand, Lokesh & everyone else. And also we went for an adventurous night safari and saw barking deers, tuskar elephant.
+                      li
+                        ul 
+                          li
+                            .media
+                              img.align-self-center(src='../assets/images/blog/9.jpg', alt='Generic placeholder image')
+                              .media-body
+                                .row
+                                  .col-xl-12
+                                    h6.mt-0
+                                      | Jolio Mark
+                                      span  ( Designer )
+                                p
+                                  | There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                      li
+                        .media 
+                          img.align-self-center(src='../assets/images/blog/4.jpg', alt='Generic placeholder image')
+                          .media-body 
+                            .row
+                              .col-md-4.xl-100
+                                h6.mt-0
+                                  | Jolio Mark
+                                  span  ( Designer )
+                              .col-md-8.xl-100
+                                ul.comment-social.float-start.float-md-end.learning-comment
+                                  li
+                                    i.icofont.icofont-thumbs-up
+                                    | 02 Hits
+                                  li
+                                    i.icofont.icofont-ui-chat
+                                    | 598 Comments
+                            p 
+                              | Clean resort with maintained garden but rooms are average Lack of communication between the staff members. Receptionsit full of attitude. Arrogant staff. Except good view there is nothing great in this property.Resort is 35 kms away from Ramnagar Town.
+              .col-xl-3.xl-40.box-col-12.learning-filter
+                .md-sidebar 
+                  a.btn.btn-primary.email-aside-toggle.md-sidebar-toggle Learning filter
+                  .md-sidebar-aside.job-sidebar
+                    #accordionoc.default-according.style-1.faq-accordion.job-accordion
+                      .row
+                        .col-xl-12
+                          .card
+                            .card-header 
+                              h5.mb-0 
+                                button.btn.btn-link(data-bs-toggle='collapse', data-bs-target='#collapseicon', aria-expanded='true', aria-controls='collapseicon') Find Course
+                            #collapseicon.collapse.show(aria-labelledby='collapseicon', data-bs-parent='#accordion')
+                              .card-body.filter-cards-view.animate-chk
+                                .job-filter
+                                  .faq-form
+                                    input.form-control(type='text', placeholder='Search..')
+                                    i.search-icon(data-feather='search')
+                                .checkbox-animated
+                                  .learning-header
+                                    span.f-w-600 Categories
+                                  label.d-block(for='chk-ani')
+                                    input#chk-ani.checkbox_animated(type='checkbox')
+                                    |                       Accounting
+                                  label.d-block(for='chk-ani0')
+                                    input#chk-ani0.checkbox_animated(type='checkbox')
+                                    |                             Design
+                                  label.d-block(for='chk-ani1')
+                                    input#chk-ani1.checkbox_animated(type='checkbox')
+                                    |                             Development
+                                  label.d-block(for='chk-ani2')
+                                    input#chk-ani2.checkbox_animated(type='checkbox')
+                                    |                             Management
+                                .checkbox-animated.mt-0
+                                  .learning-header
+                                    span.f-w-600 Duration
+                                  label.d-block(for='chk-ani6')
+                                    input#chk-ani6.checkbox_animated(type='checkbox')
+                                    |                             0-50 hours
+                                  label.d-block(for='chk-ani7')
+                                    input#chk-ani7.checkbox_animated(type='checkbox')
+                                    |                             50-100 hours
+                                  label.d-block(for='chk-ani8')
+                                    input#chk-ani8.checkbox_animated(type='checkbox')
+                                    |                             100+ hours
+                                .checkbox-animated.mt-0
+                                  .learning-header
+                                    span.f-w-600 Price
+                                  label.d-block(for='edo-ani')
+                                    input#edo-ani.radio_animated(type='radio', name='rdo-ani', checked='')
+                                    |                             All Courses
+                                  label.d-block(for='edo-ani1')
+                                    input#edo-ani1.radio_animated(type='radio', name='rdo-ani', checked='')
+                                    |                             Paid Courses
+                                  label.d-block(for='edo-ani2')
+                                    input#edo-ani2.radio_animated(type='radio', name='rdo-ani', checked='')
+                                    |                             Free Courses
+                                .checkbox-animated.mt-0
+                                  .learning-header
+                                    span.f-w-600 Status
+                                  label.d-block(for='chk-ani3')
+                                    input#chk-ani3.checkbox_animated(type='checkbox')
+                                    |                             Registration
+                                  label.d-block(for='chk-ani4')
+                                    input#chk-ani4.checkbox_animated(type='checkbox')
+                                    |                             Progress
+                                  label.d-block(for='chk-ani5')
+                                    input#chk-ani5.checkbox_animated(type='checkbox')
+                                    |                             Completed
+                                button.btn.btn-primary.text-center(type='button') Filter
+                        .col-xl-12
+                          .card
+                            .card-header
+                              h5.mb-0
+                                button.btn.btn-link(data-bs-toggle='collapse', data-bs-target='#collapseicon1', aria-expanded='true', aria-controls='collapseicon1') Categories
+                            #collapseicon1.collapse.card-body.px-0.show(aria-labelledby='collapseicon1', data-bs-parent='#accordion')
+                              .categories
+                                .learning-header
+                                  span.f-w-600 Design
+                                ul
+                                  li
+                                    a(href='#') UI Design 
+                                    span.badge.badge-primary.pull-right 28
+                                  li
+                                    a(href='#') UX Design 
+                                    span.badge.badge-primary.pull-right 35
+                                  li
+                                    a(href='#') Interface Design 
+                                    span.badge.badge-primary.pull-right 17
+                                  li
+                                    a(href='#') User Experience 
+                                    span.badge.badge-primary.pull-right 26
+                              .categories.pt-0.pb-0
+                                .learning-header
+                                  span.f-w-600 Development
+                                ul 
+                                  li
+                                    a(href='#') Frontend Development
+                                    span.badge.badge-primary.pull-right 48
+                                  li
+                                    a(href='#') Backend Development
+                                    span.badge.badge-primary.pull-right 19
+                        .col-xl-12
+                          .card
+                            .card-header 
+                              h5.mb-0
+                                button.btn.btn-link(data-bs-toggle='collapse', data-bs-target='#collapseicon2', aria-expanded='true', aria-controls='collapseicon2') Upcoming Courses
+                            #collapseicon2.collapse.show(aria-labelledby='collapseicon2', data-bs-parent='#accordion')
+                              .upcoming-course.card-body
+                                .media.common-space
+                                  .media-body
+                                    span.f-w-600 UX Development
+                                    span.d-block
+                                      | Course By 
+                                      a(href='#').f-w-500 Development Team
+                                    span.d-block
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star-half-o.font-warning
+                                  div
+                                    h5.mb-0.font-primary 18
+                                    span.d-block Dec
+                                .media.common-space
+                                  .media-body
+                                    span.f-w-600 Business Analyst
+                                    span.d-block
+                                      | Course By 
+                                      a(href='#').f-w-500 Analyst Team
+                                    span.d-block
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                  div
+                                    h5.mb-0.font-primary 28
+                                    span.d-block Dec
+                                .media.common-space
+                                  .media-body
+                                    span.f-w-600 Web Development
+                                    span.d-block
+                                      | Course By 
+                                      a(href='#').f-w-500 Designer
+                                    span.d-block
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star.font-warning 
+                                      i.fa.fa-star.font-warning
+                                      i.fa.fa-star-o.font-warning
+                                  div
+                                    h5.mb-0.font-primary 5 
+                                    span.d-block Jan
+          // Container-fluid Ends
+        include ../../components/footer
+    include ../../components/footer-files

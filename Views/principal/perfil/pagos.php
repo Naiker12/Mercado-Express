@@ -91,7 +91,7 @@
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex">
                                     <!-- imagen -->
-                                    <img src="../assets/images/svg-graphics/visa.svg" alt="">
+                                    <img src="../assets/img/svg-graphics/visa.svg" alt="">
                                     <!-- texto -->
                                     <div class="ms-4">
                                         <h5 class="mb-0 h6 h6">**** 1234</h5>
@@ -109,7 +109,7 @@
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex">
                                     <!-- imagen -->
-                                    <img src="../assets/images/svg-graphics/mastercard.svg" alt="" class="me-3">
+                                    <img src="../assets/img/svg-graphics/mastercard.svg" alt="" class="me-3">
                                     <div>
                                         <h5 class="mb-0 h6">Mastercard terminada en 1234</h5>
                                         <p class="mb-0 small">Expira en 03/2026</p>
@@ -126,7 +126,7 @@
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex">
                                     <!-- imagen -->
-                                    <img src="../assets/images/svg-graphics/discover.svg" alt="" class="me-3">
+                                    <img src="../assets/img/svg-graphics/discover.svg" alt="" class="me-3">
                                     <div>
                                         <!-- texto -->
                                         <h5 class="mb-0 h6">Discover terminada en 1234</h5>
@@ -146,7 +146,7 @@
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex">
                                     <!-- imagen -->
-                                    <img src="../assets/images/svg-graphics/americanexpress.svg" alt="" class="me-3">
+                                    <img src="../assets/img/svg-graphics/americanexpress.svg" alt="" class="me-3">
                                     <!-- texto -->
                                     <div>
                                         <h5 class="mb-0 h6">American Express terminada en 1234</h5>
@@ -164,7 +164,7 @@
                             <div class="d-flex justify-content-between">
                                 <div class="d-flex">
                                     <!-- imagen -->
-                                    <img src="../assets/images/svg-graphics/paypal.svg" alt="" class="me-3">
+                                    <img src="../assets/img/svg-graphics/paypal.svg" alt="" class="me-3">
                                     <div>
                                         <!-- texto -->
                                         <h5 class="mb-0 h6">Paypal Express terminada en 1234</h5>
@@ -274,14 +274,14 @@
                                     <input type="radio" id="paymentRadioOne" name="paymentRadioOne"
                                         class="form-check-input" />
                                     <label class="form-check-label" for="paymentRadioOne"><img
-                                            src="../assets/images/payment/american-express.svg" alt="" /></label>
+                                            src="../assets/img/payment/american-express.svg" alt="" /></label>
                                 </div>
                                 <!-- Botón de Radio -->
                                 <div class="form-check me-2">
                                     <input type="radio" id="paymentRadioTwo" name="paymentRadioOne"
                                         class="form-check-input" />
                                     <label class="form-check-label" for="paymentRadioTwo"><img
-                                            src="../assets/images/payment/mastercard.svg" alt="" /></label>
+                                            src="../assets/img/payment/mastercard.svg" alt="" /></label>
                                 </div>
 
                                 <!-- Botón de Radio -->
@@ -289,7 +289,7 @@
                                     <input type="radio" id="paymentRadioFour" name="paymentRadioOne"
                                         class="form-check-input" />
                                     <label class="form-check-label" for="paymentRadioFour"><img
-                                            src="../assets/images/payment/visa.svg" alt="" /></label>
+                                            src="../assets/img/payment/visa.svg" alt="" /></label>
                                 </div>
                             </div>
                         </div>

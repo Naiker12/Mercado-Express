@@ -1,0 +1,86 @@
+
+//- ====== Orders Table  ====== -//
+- 
+    var LIVE_PRODUCT=
+        {
+            header:["Product Name" , "Type" , "Stock" ,"Variants", "Action"],
+            body:[
+                {
+                    id: "dropdownMenuButtonicon6",
+                    image:"6.png", 
+                    title:"Formal Shirts",
+                    customerName: "Men",
+                    variants:"3",
+                    check: "checked",
+                    iconName:"more-horizontal",
+                },
+                {
+                    id: "dropdownMenuButtonMenu8",
+                    image:"7.png",
+                    title:"Loafers", 
+                    customerName: "Men",
+                    variants:"1",
+                    check: "",
+                    iconName:"more-horizontal",
+                },
+                {
+                    id: "dropdownMenuButtonicon3",
+                    image:"8.png",
+                    title:"Jeans",
+                    customerName: "Women",
+                    variants:"4",
+                    check: "checked",
+                    iconName:"more-horizontal",
+                },
+                {
+                    id: "dropdownMenuButtonicon9",
+                    image:"9.png",
+                    title:"Saree",
+                    customerName: "Women",
+                    variants:"3",
+                    check: "checked",
+                    iconName:"more-horizontal",
+                },
+            ]    
+        };
+
+//- ====================
+//- Orders Table 
+//- ====================
+
+table(class='order-table w-100')
+    thead 
+        tr
+            each head in LIVE_PRODUCT.header
+                th=  head
+    tbody
+        each bodyData in LIVE_PRODUCT.body
+            tr
+                td
+                    div(class="product-name")
+                        img(class="order-table-images img-fluid" src=`../assets/images/dashboard/order-table/${bodyData.image}` alt=`user`)
+                        div(class="product-sub") 
+                           a(href="product.html" class='f-14 f-w-600')=bodyData.title 
+                td
+                    div(class="product-sub")
+                       a(href="product.html" class='f-14 f-w-500')=bodyData.customerName
+                td
+                    .media
+                      .media-body.text-end.switch-sm
+                        label.switch
+                          if(bodyData.check)
+                            input(type='checkbox' checked='checked' )
+                          span.switch-state 
+
+
+                td
+                   h6=bodyData.variants
+                td
+                  .dropdown
+                    div(id=bodyData.id data-bs-toggle='dropdown', aria-expanded='false' role="menu")
+                      svg(class="invoice-icon") 
+                          use(href=`../assets/svg/icon-sprite.svg#${bodyData.iconName}`)
+                    .dropdown-menu.dropdown-menu-end(aria-labelledby=`${bodyData.id}`)
+                      span.dropdown-item Last Month
+                      span.dropdown-item Last Week
+                      span.dropdown-item Last Day 

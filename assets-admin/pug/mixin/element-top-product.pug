@@ -1,0 +1,81 @@
+//- =====================
+//- top-product
+//- =====================
+-
+    var TOP_PRODUCT= 
+        [
+            {
+                image:"1.png",
+                productId:"SKU90400",
+                subTitle:"Huawai Smart Watch",
+                price:"$39.02",
+                quality:"QTY :",
+                qualityno: "12", 
+                revenue:"Revenue : ",
+                revenueno: "$51",
+                profit:"Profit :",
+                profitno: "$15",
+            },
+            {
+                image:"2.png",
+                productId:"SKU78589",
+                subTitle:"Noise - Wireless Headphone",
+                price:"$45.26",
+                quality:"QTY :",
+                qualityno: "19",
+                revenue:"Revenue : ",
+                revenueno: "$8",
+                profit:"Profit :",
+                profitno: " $9",
+            },
+            {
+                image:"3.png",
+                productId:"SKU78599",
+                subTitle:"Men & Women Footwear",
+                price:"$45.62",
+                quality:"QTY : ",
+                qualityno: "9",
+                revenue:"Revenue :",
+                revenueno: " $15",
+                profit:"Profit : ",
+                profitno: "$18",
+
+            },
+            {
+                image:"4.png",
+                productId:"SKU78596",
+                subTitle:"Anime White Half Sleev T-shirt",
+                price:"$589.26",
+                quality:"QTY :", 
+                qualityno : "9",
+                revenue:"Revenue : ",
+                revenueno :"$7",
+                profit:"Profit :",
+                profitno: "$42",
+            },
+        ]
+//- ==================
+//- Top-product
+//- ==================
+mixin top-product(data)
+    ul
+        each items in data
+            li(class="d-flex top-product gap-2")
+                div
+                    img(src=`../assets/images/dashboard-3/product/${items.image}` class="img-fluid product-img" alt='product')  
+                div(class='w-100').d-flex.justify-content-between.align-items-center
+                    div(class="product-details")
+                        div
+                            span.badge.rounded-pill.badge-light.text-dark=items.productId
+                        a(class="f-10 f-w-500  line-clamp" href="product.html")=items.subTitle
+                        span(class="f-10 f-w-500 txt-primary")=items.price
+                    div(class="product-items")
+                        div.common-space.gap-1
+                            span(class="f-10 f-w-500 f-light")=items.quality
+                            span(class="f-10 f-w-500")=items.qualityno
+                        div.common-space.gap-1
+                            span(class="f-10 f-w-500 f-light")=items.revenue
+                            span(class="f-10 f-w-500  ")=items.revenueno
+                        div.common-space.gap-1
+                            span(class="f-10 f-w-500 f-light")=items.profit
+                            span(class="f-10 f-w-500 ")=items.profitno

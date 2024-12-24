@@ -1,0 +1,34 @@
+//- =====================
+//-  user-alerts
+//- =====================
+-
+    var USER_ALERTS= 
+      [
+         { 
+            image:"5.jpg", 
+            name:"Floyd Miles",
+            subTitle: "Sir, Can i remove part in des...",
+         },
+         {
+            image:"6.jpg", 
+            name:"Dianne Russell",
+            subTitle: "So, what is my next work ?",
+         },
+      ]
+//- ==================
+//- User-alerts
+//- ==================
+mixin user-alerts(data)
+  ul 
+    each item in data
+        li
+            div(class="user-alerts")
+                img(class="user-image rounded-circle img-fluid me-2" src=`../assets/images/dashboard/user/${item.image}` alt=`user`)
+                div(class="user-name")
+                    div 
+                        h6
+                            a(href="../template/user-profile.html" class="f-w-500 f-14")=item.name
+                        span(class="f-light f-w-500 f-12")=item.subTitle
+                    div 
+                        svg
+                            use(href="../assets/svg/icon-sprite.svg#more-vertical")

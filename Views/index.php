@@ -1,243 +1,6 @@
 <?php include_once 'Views/template/header_principal.php'; ?>
 
 
-<!-- Shop Cart -->
-
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header border-bottom">
-        <div class="text-start">
-            <h5 id="offcanvasRightLabel" class="mb-0 fs-4">Carrito de Compras</h5>
-            <small>Ubicación en 382480</small>
-        </div>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-    </div>
-
-    <div class="offcanvas-body">
-
-        <div class="alert alert-danger" role="alert">
-            ¡Tienes envío GRATIS! ¡Comienza el proceso de compra ahora!
-        </div>
-
-        <div>
-            <div class="py-3">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item py-3 px-0 border-top">
-                        <div class="row align-items-center">
-                            <div class="col-2">
-                                <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-1.jpg"
-                                    alt="Ecommerce" class="img-fluid">
-                            </div>
-                            <div class="col-5">
-                                <h6 class="mb-0">Plátano Orgánico</h6>
-                                <span><small class="text-muted">.98 / lb</small></span>
-                                <div class="mt-2 small"> <a href="#!" class="text-decoration-none"> <span class="me-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-trash-2">
-                                                <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path
-                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                                                </path>
-                                                <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                <line x1="14" y1="11" x2="14" y2="17"></line>
-                                            </svg></span>Eliminar</a></div>
-                            </div>
-                            <div class="col-3">
-                                <div class="input-group  flex-nowrap justify-content-center  ">
-                                    <input type="button" value="-"
-                                        class="button-minus form-control  text-center flex-xl-none w-xl-30 w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                    <input type="number" step="1" max="10" value="1" name="quantity"
-                                        class="quantity-field form-control text-center flex-xl-none w-xl-30 w-xxl-10 px-0 ">
-                                    <input type="button" value="+"
-                                        class="button-plus form-control  text-center flex-xl-none w-xl-30  w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                </div>
-                            </div>
-                            <div class="col-2 text-end">
-                                <span class="fw-bold">$35.00</span>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item py-3 px-0">
-                        <div class="row row align-items-center">
-                            <div class="col-2">
-                                <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-2.jpg"
-                                    alt="Ecommerce" class="img-fluid">
-                            </div>
-                            <div class="col-5">
-                                <h6 class="mb-0">Ajo Fresco, 250g</h6>
-                                <span><small class="text-muted">250g</small></span>
-                                <div class="mt-2 small"> <a href="#!" class="text-decoration-none"> <span class="me-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-trash-2">
-                                                <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path
-                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                                                </path>
-                                                <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                <line x1="14" y1="11" x2="14" y2="17"></line>
-                                            </svg></span>Eliminar</a></div>
-                            </div>
-                            <div class="col-3">
-                                <div class="input-group  flex-nowrap justify-content-center  ">
-                                    <input type="button" value="-"
-                                        class="button-minus form-control  text-center flex-xl-none w-xl-30 w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                    <input type="number" step="1" max="10" value="1" name="quantity"
-                                        class="quantity-field form-control text-center flex-xl-none w-xl-30 w-xxl-10 px-0 ">
-                                    <input type="button" value="+"
-                                        class="button-plus form-control  text-center flex-xl-none w-xl-30  w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                </div>
-                            </div>
-                            <div class="col-2 text-end">
-                                <span class="fw-bold">$20.97</span>
-                                <span class="text-decoration-line-through text-muted small">$26.97</span>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item py-3 px-0">
-                        <div class="row row align-items-center">
-                            <div class="col-2">
-                                <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-3.jpg"
-                                    alt="Ecommerce" class="img-fluid">
-                            </div>
-                            <div class="col-5">
-                                <h6 class="mb-0">Cebolla Fresca, 1kg</h6>
-                                <span><small class="text-muted">1 kg</small></span>
-                                <div class="mt-2 small"> <a href="#!" class="text-decoration-none"> <span class="me-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-trash-2">
-                                                <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path
-                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                                                </path>
-                                                <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                <line x1="14" y1="11" x2="14" y2="17"></line>
-                                            </svg></span>Eliminar</a></div>
-                            </div>
-                            <div class="col-3">
-                                <div class="input-group  flex-nowrap justify-content-center  ">
-                                    <input type="button" value="-"
-                                        class="button-minus form-control  text-center flex-xl-none w-xl-30 w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                    <input type="number" step="1" max="10" value="1" name="quantity"
-                                        class="quantity-field form-control text-center flex-xl-none w-xl-30 w-xxl-10 px-0 ">
-                                    <input type="button" value="+"
-                                        class="button-plus form-control  text-center flex-xl-none w-xl-30  w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                </div>
-                            </div>
-                            <div class="col-2 text-end">
-                                <span class="fw-bold">$25.00</span>
-                                <span class="text-decoration-line-through text-muted small">$45.00</span>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item py-3 px-0">
-                        <div class="row row align-items-center">
-                            <div class="col-2">
-                                <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-4.jpg"
-                                    alt="Ecommerce" class="img-fluid">
-                            </div>
-                            <div class="col-5">
-                                <h6 class="mb-0">Jengibre Fresco</h6>
-                                <span><small class="text-muted">250g</small></span>
-                                <div class="mt-2 small"> <a href="#!" class="text-decoration-none"> <span class="me-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-trash-2">
-                                                <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path
-                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                                                </path>
-                                                <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                <line x1="14" y1="11" x2="14" y2="17"></line>
-                                            </svg></span>Eliminar</a></div>
-                            </div>
-                            <div class="col-3">
-                                <div class="input-group  flex-nowrap justify-content-center  ">
-                                    <input type="button" value="-"
-                                        class="button-minus form-control  text-center flex-xl-none w-xl-30 w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                    <input type="number" step="1" max="10" value="1" name="quantity"
-                                        class="quantity-field form-control text-center flex-xl-none w-xl-30 w-xxl-10 px-0 ">
-                                    <input type="button" value="+"
-                                        class="button-plus form-control  text-center flex-xl-none w-xl-30  w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                </div>
-                            </div>
-                            <div class="col-2 text-end">
-                                <span class="fw-bold">$39.87</span>
-                                <span class="text-decoration-line-through text-muted small">$45.00</span>
-                            </div>
-                        </div>
-
-                    </li>
-                    <li class="list-group-item py-3 px-0 border-bottom">
-                        <div class="row row align-items-center">
-                            <div class="col-2">
-                                <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-5.jpg"
-                                    alt="Ecommerce" class="img-fluid">
-                            </div>
-                            <div class="col-5">
-                                <h6 class="mb-0">Manzanas Royal Gala, Caja de 4 Piezas</h6>
-                                <span><small class="text-muted">4 Manzanas</small></span>
-                                <div class="mt-2 small"> <a href="#!" class="text-decoration-none"> <span class="me-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-trash-2">
-                                                <polyline points="3 6 5 6 21 6"></polyline>
-                                                <path
-                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                                                </path>
-                                                <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                <line x1="14" y1="11" x2="14" y2="17"></line>
-                                            </svg></span>Eliminar</a></div>
-                            </div>
-                            <div class="col-3">
-                                <div class="input-group  flex-nowrap justify-content-center  ">
-                                    <input type="button" value="-"
-                                        class="button-minus form-control  text-center flex-xl-none w-xl-30 w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                    <input type="number" step="1" max="10" value="1" name="quantity"
-                                        class="quantity-field form-control text-center flex-xl-none w-xl-30 w-xxl-10 px-0 ">
-                                    <input type="button" value="+"
-                                        class="button-plus form-control  text-center flex-xl-none w-xl-30  w-xxl-10 px-0  "
-                                        data-field="quantity">
-                                </div>
-                            </div>
-                            <div class="col-2 text-end">
-                                <span class="fw-bold">$39.87</span>
-                                <span class="text-decoration-line-through text-muted small">$45.00</span>
-                            </div>
-                        </div>
-
-                    </li>
-
-                </ul>
-            </div>
-            <div class="d-grid">
-
-                <button class="btn btn-primary btn-lg d-flex justify-content-between align-items-center" type="submit">
-                    Ir a Pagar <span class="fw-bold">$120.00</span></button>
-            </div>
-        </div>
-    </div>
-
-</div>
-
 <!-- Modal -->
 <div class="modal fade" id="locationModal" tabindex="-1" aria-labelledby="locationModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered">
@@ -304,7 +67,7 @@
     <div class="container">
         <div class="hero-slider">
             <div
-                style="background: url(<?php echo BASE_URL; ?>assets/images/slider/slide-1.jpg)no-repeat; background-size: cover; border-radius: .5rem; background-position: center;">
+                style="background: url(<?php echo BASE_URL; ?>assets/img/slider/slide-1.jpg)no-repeat; background-size: cover; border-radius: .5rem; background-position: center;">
                 <div class="ps-lg-12 py-lg-16 col-xxl-5 col-md-7 py-14 px-8 text-xs-center">
                     <span class="badge text-bg-warning">Descuento de Apertura 50%</span>
 
@@ -316,7 +79,7 @@
                 </div>
             </div>
             <div
-                style="background: url(<?php echo BASE_URL; ?>assets/images/slider/slider-2.jpg)no-repeat; background-size: cover; border-radius: .5rem; background-position: center;">
+                style="background: url(<?php echo BASE_URL; ?>assets/img/slider/slider-2.jpg)no-repeat; background-size: cover; border-radius: .5rem; background-position: center;">
                 <div class="ps-lg-12 py-lg-16 col-xxl-5 col-md-7 py-14 px-8 text-xs-center">
                     <span class="badge text-bg-warning">Envío Gratis - pedidos superiores a $100</span>
                     <h2 class="text-dark display-5 fw-bold mt-4">Envío Gratis en <br> pedidos superiores a <span
@@ -344,118 +107,20 @@
         </div>
         <div class="category-slider">
 
+            <?php foreach ($data['categorias']  as $categoria) { ?>
             <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
+                <a href="<?php echo BASE_URL . 'principal/categorias/' . $categoria['id']; ?>"
+                    class="text-decoration-none text-inherit">
                     <div class="card card-product mb-4">
                         <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-dairy-bread-eggs.jpg"
+                            <img src="<?php echo $categoria['imagen']; ?>" alt="<?php echo $categoria['categoria']; ?>"
                                 alt="Plantilla de Ecommerce de Comestibles" class="mb-3 img-fluid">
-                            <div>Lácteos, Pan y Huevos</div>
+                            <div><?php echo $categoria['categoria']; ?></div>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-snack-munchies.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Bocadillos y Snacks</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-bakery-biscuits.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Panadería y Galletas</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-instant-food.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Comida Instantánea</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-tea-coffee-drinks.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Té, Café y Bebidas</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-atta-rice-dal.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Harina, Arroz y Legumbres</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-baby-care.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Cuidado del Bebé</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-chicken-meat-fish.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Pollo, Carne y Pescado</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-cleaning-essentials.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Productos de Limpieza</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="pages/shop-grid.html" class="text-decoration-none text-inherit">
-                    <div class="card card-product mb-4">
-                        <div class="card-body text-center py-8">
-                            <img src="<?php echo BASE_URL; ?>assets/images/category/category-pet-care.jpg"
-                                alt="Plantilla de Ecommerce de Comestibles" class="mb-3">
-                            <div>Cuidado de Mascotas</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
+            <?php } ?>
         </div>
     </div>
 </section>
@@ -467,7 +132,7 @@
             <div class="col-12 col-lg-6 mb-3 mb-lg-0">
                 <div>
                     <div class="py-10 px-8 rounded-3"
-                        style="background:url(<?php echo BASE_URL; ?>assets/images/banner/grocery-banner.png)no-repeat; background-size: cover; background-position: center;">
+                        style="background:url(<?php echo BASE_URL; ?>assets/img/banner/grocery-banner.png)no-repeat; background-size: cover; background-position: center;">
                         <div>
                             <h3 class="fw-bold mb-1">Frutas y Verduras
                             </h3>
@@ -480,7 +145,7 @@
             <div class="col-12 col-lg-6 ">
                 <div>
                     <div class="py-10 px-8 rounded-3"
-                        style="background:url(<?php echo BASE_URL; ?>assets/images/banner/grocery-banner-2.jpg)no-repeat; background-size: cover; background-position: center;">
+                        style="background:url(<?php echo BASE_URL; ?>assets/img/banner/grocery-banner-2.jpg)no-repeat; background-size: cover; background-position: center;">
                         <div>
                             <h3 class="fw-bold mb-1">Panecillos Recién Horneados
                             </h3>
@@ -500,476 +165,113 @@
         <div class="row">
             <div class="col-12 mb-6">
 
-                <h3 class="mb-0">Produd/h3>
+                <h3 class="mb-0">Productos</h3>
 
             </div>
         </div>
 
         <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
+            <?php foreach ($data['nuevoProductos'] as $producto) { ?>
             <div class="col">
-                <div class="card card-product">
+                <div class="card card-product h-100">
                     <div class="card-body">
 
-                        <div class="text-center position-relative ">
-                            <div class=" position-absolute top-0 start-0">
+                        <div class="text-center position-relative">
+                            <div class="position-absolute top-0 start-0">
                                 <span class="badge bg-danger">Sale</span>
                             </div>
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-1.jpg"
-                                    alt="Grocery Ecommerce Template" class="mb-3 img-fluid"></a>
+
+                            <!-- Imagen con tamaño uniforme -->
+                            <a href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>">
+                                <div class="image-container mb-3">
+                                    <img src="<?php echo $producto['imagen']; ?>" alt="Producto" class="img-fluid">
+                                </div>
+                            </a>
 
                             <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Quick View"></i></a>
+                                <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+                                    <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true"
+                                        title="Quick View"></i>
+                                </a>
+                                <a href="#!" class="btn-action btnAddDeseo"
+                                    prod="<?php echo $producto['id']; ?> data-bs-toggle=" tooltip" data-bs-html="true"
+                                    title="Wishlist" <i class="bi bi-heart"></i>
+                                </a>
                                 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Wishlist"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Compare"><i class="bi bi-arrow-left-right"></i></a>
+                                    title="Compare">
+                                    <i class="bi bi-arrow-left-right"></i>
+                                </a>
                             </div>
+                        </div>
 
+                        <div class="text-small mb-1">
+                            <a href="#!" class="text-decoration-none text-muted">
+                                <small>Snack & Munchies</small>
+                            </a>
                         </div>
-                        <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Snack &
-                                    Munchies</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Haldiram's Sev
-                                Bhujia</a></h2>
-                        <div>
-
-                            <small class="text-warning"> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5(149)</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div><span class="text-dark">$18</span> <span
-                                    class="text-decoration-line-through text-muted">$24</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Add</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-                        <div class="text-center position-relative">
-                            <div class=" position-absolute top-0 start-0">
-                                <span class="badge bg-success">14%</span>
-                            </div>
-                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/images/products/product-img-2.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                    data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-
-                        </div>
-                        <div class="text-small mb-1"><a href="#!"
-                                class="text-decoration-none text-muted"><small>Panadería
-                                    y Galletas</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">NutriChoice Digestive
-                            </a></h2>
-                        <div class="text-warning">
-
-                            <small> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (25)</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div><span class="text-dark">$24</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-                        <div class="text-center position-relative"> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-3.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                    data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-small mb-1"><a href="#!"
-                                class="text-decoration-none text-muted"><small>Panadería
-                                    y Galletas</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Chocolate Cadbury 5 Star
-                            </a></h2>
-                        <div class="text-warning">
-
-                            <small> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i></small> <span class="text-muted small">5 (469)</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div><span class="text-dark">$32</span> <span
-                                    class="text-decoration-line-through text-muted">$35</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-                        <div class="text-center position-relative"> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-4.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                    data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-                            <div class=" position-absolute top-0 start-0">
-                                <span class="badge bg-danger">Nuevo</span>
-                            </div>
-                        </div>
-                        <div class="text-small mb-1"><a href="#!"
-                                class="text-decoration-none text-muted"><small>Aperitivos
-                                    y Munchies</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Papas Sabor Cebolla</a>
+                        <h2 class="fs-6">
+                            <a href="<?php echo BASE_URL . 'principal/detail/' . $producto['id']; ?>"
+                                class="text-inherit text-decoration-none">
+                                <?php echo $producto['nombre']; ?>
+                            </a>
                         </h2>
-                        <div class="text-warning">
-
-                            <small> <i class="bi bi-star-fill"></i>
+                        <div>
+                            <small class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-half"></i>
-                                <i class="bi bi-star"></i></small> <span class="text-muted small">3.5 (456)</span>
+                            </small>
+                            <span class="text-muted small">4.5(149)</span>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div><span class="text-dark">$3</span> <span
-                                    class="text-decoration-line-through text-muted">$5</span>
+                            <div>
+                                <span class="text-dark">
+                                    <?php echo MONEDA . ' ' . $producto['precio']; ?>
+                                </span>
+                                <span class="text-decoration-line-through text-muted">$24</span>
                             </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
+                            <div>
+                                <a href="#!" class="btn btn-primary btn-sm btnAddcarrito" prod="product-id-here">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                         stroke-linejoin="round" class="feather feather-plus">
                                         <line x1="12" y1="5" x2="12" y2="19"></line>
                                         <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
+                                    </svg>
+                                    Carrito
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-                        <div class="text-center position-relative"> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-5.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                    data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Comida
-                                    Instantánea</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Palomitas de Maíz
-                                Instantáneas con Sal</a></h2>
-                        <div class="text-warning">
-
-                            <small> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (39)</span>
-                        </div>
-                        <div class="d-flex justify-content-between mt-4">
-                            <div><span class="text-dark">$13</span> <span
-                                    class="text-decoration-line-through text-muted">$18</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-
-                        <div class="text-center position-relative ">
-                            <div class=" position-absolute top-0 start-0">
-                                <span class="badge bg-danger">Oferta</span>
-                            </div>
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-6.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-small mb-1"><a href="#!"
-                                class="text-decoration-none text-muted"><small>Lácteos,
-                                    Pan y
-                                    Huevos</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Yogur Griego de
-                                Arándano</a>
-                        </h2>
-                        <div>
-
-                            <small class="text-warning"> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (189)</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div><span class="text-dark">$18</span> <span
-                                    class="text-decoration-line-through text-muted">$24</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-                        <div class="text-center position-relative"> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-7.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                    data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-small mb-1"><a href="#!"
-                                class="text-decoration-none text-muted"><small>Lácteos,
-                                    Pan y
-                                    Huevos</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Rebanadas de Queso
-                                Britannia</a></h2>
-                        <div class="text-warning">
-
-                            <small> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i></small> <span class="text-muted small">5 (345)</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div><span class="text-dark">$24</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-                        <div class="text-center position-relative"> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-8.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                    data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Comida
-                                    instantánea</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Cereal Original
-                                Kellogg's</a>
-                        </h2>
-                        <div class="text-warning">
-
-                            <small> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i></small> <span class="text-muted small">4 (90)</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div><span class="text-dark">$32</span> <span
-                                    class="text-decoration-line-through text-muted">$35</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-                        <div class="text-center position-relative"> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-9.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                    data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>Snacks
-                                    y
-                                    Aperitivos</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Slurrp Chocolate de
-                                Mijo</a></h2>
-                        <div class="text-warning">
-
-                            <small> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5 (67)</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center mt-3">
-                            <div><span class="text-dark">$3</span> <span
-                                    class="text-decoration-line-through text-muted">$5</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card card-product">
-                    <div class="card-body">
-                        <div class="text-center position-relative"> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-10.jpg"
-                                    alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
-                            <div class="card-product-action">
-                                <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                    data-bs-target="#quickViewModal"><i class="bi bi-eye" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Vista rápida"></i></a>
-                                <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                    data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                    title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-small mb-1"><a href="#!"
-                                class="text-decoration-none text-muted"><small>Lácteos,
-                                    Panadería y Huevos</small></a></div>
-                        <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Mantequilla Amul - 500
-                                g</a>
-                        </h2>
-                        <div class="text-warning">
-
-                            <small> <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i>
-                                <i class="bi bi-star"></i></small> <span class="text-muted small">3.5 (89)</span>
-                        </div>
-                        <div class="d-flex justify-content-between mt-4">
-                            <div><span class="text-dark">$13</span> <span
-                                    class="text-decoration-line-through text-muted">$18</span>
-                            </div>
-                            <div><a href="#!" class="btn btn-primary btn-sm">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-plus">
-                                        <line x1="12" y1="5" x2="12" y2="19"></line>
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    </svg> Añadir</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+            <?php } ?>
         </div>
+
+        <!-- Estilos CSS -->
+        <style>
+        .image-container {
+            height: 200px;
+            /* Altura fija para las imágenes */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            /* Asegura que la imagen llene el contenedor */
+        }
+
+        .card-product {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        </style>
 
     </div>
 </section>
@@ -987,7 +289,7 @@
         <div class="row row-cols-lg-4 row-cols-1 row-cols-md-2 g-4">
             <div class="col">
                 <div class=" pt-8 px-8 rounded-3"
-                    style="background:url(<?php echo BASE_URL; ?>assets/images/banner/banner-deal.jpg)no-repeat; background-size: cover; height: 470px;">
+                    style="background:url(<?php echo BASE_URL; ?>assets/img/banner/banner-deal.jpg)no-repeat; background-size: cover; height: 470px;">
 
                     <div>
                         <h3 class="fw-bold text-white">100% Granos de Café
@@ -1003,7 +305,7 @@
                 <div class="card card-product">
                     <div class="card-body">
                         <div class="text-center  position-relative "> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-11.jpg"
+                                    src="<?php echo BASE_URL; ?>assets/img/products/product-img-11.jpg"
                                     alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
 
                             <div class="card-product-action">
@@ -1053,7 +355,7 @@
                 <div class="card card-product">
                     <div class="card-body">
                         <div class="text-center  position-relative "> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-12.jpg"
+                                    src="<?php echo BASE_URL; ?>assets/img/products/product-img-12.jpg"
                                     alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
 
                             <div class="card-product-action">
@@ -1110,7 +412,7 @@
                 <div class="card card-product">
                     <div class="card-body">
                         <div class="text-center  position-relative "> <a href="#!"><img
-                                    src="<?php echo BASE_URL; ?>assets/images/products/product-img-13.jpg"
+                                    src="<?php echo BASE_URL; ?>assets/img/products/product-img-13.jpg"
                                     alt="Plantilla Ecommerce de Comestibles" class="mb-3 img-fluid"></a>
 
                             <div class="card-product-action">
@@ -1190,7 +492,7 @@
                             </div>
 
                             <!-- img -->
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-2.jpg"
+                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/img/products/product-img-2.jpg"
                                     alt="Plantilla de Ecommerce de Alimentos" class="mb-3 img-fluid"></a>
                             <!-- action btn -->
                             <div class="product-action-btn">
@@ -1247,7 +549,7 @@
                             </div>
 
                             <!-- img -->
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-3.jpg"
+                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/img/products/product-img-3.jpg"
                                     alt="Plantilla de Ecommerce de Alimentos" class="mb-3 img-fluid"></a>
                             <!-- action btn -->
                             <div class="product-action-btn">
@@ -1304,7 +606,7 @@
                             </div>
 
                             <!-- img -->
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-8.jpg"
+                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/img/products/product-img-8.jpg"
                                     alt="Plantilla de Ecommerce de Alimentos" class="mb-3 img-fluid"></a>
                             <!-- action btn -->
                             <div class="product-action-btn">
@@ -1362,7 +664,7 @@
                             </div>
 
                             <!-- img -->
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-9.jpg"
+                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/img/products/product-img-9.jpg"
                                     alt="Plantilla de Ecommerce de Alimentos" class="mb-3 img-fluid"></a>
                             <!-- action btn -->
                             <div class="product-action-btn">
@@ -1421,7 +723,7 @@
                             </div>
 
                             <!-- img -->
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-2.jpg"
+                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/img/products/product-img-2.jpg"
                                     alt="Plantilla de Ecommerce de Productos de Alimentos" class="mb-3 img-fluid"></a>
                             <!-- action btn -->
                             <div class="product-action-btn">
@@ -1480,7 +782,7 @@
                             </div>
 
                             <!-- img -->
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/products/product-img-3.jpg"
+                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/img/products/product-img-3.jpg"
                                     alt="Plantilla de Ecommerce de Productos de Alimentos" class="mb-3 img-fluid"></a>
                             <!-- action btn -->
                             <div class="product-action-btn">
@@ -1541,32 +843,36 @@
         <div class="row">
             <div class="col-md-6 col-lg-3">
                 <div class="mb-8 mb-xl-0">
-                    <div class="mb-6"><img src="<?php echo BASE_URL; ?>assets/images/icons/clock.svg" alt=""></div>
+                    <div class="mb-6"><img src="<?php echo BASE_URL; ?>assets/img/icons/clock.svg" alt=""></div>
                     <h3 class="h5 mb-3">
                         Comida en 10 minutos
                     </h3>
-                    <p>Recibe tu pedido lo antes posible en la puerta de tu casa desde las tiendas de recogida de FreshCart cerca de ti.</p>
+                    <p>Recibe tu pedido lo antes posible en la puerta de tu casa desde las tiendas de recogida de
+                        FreshCart cerca de ti.</p>
                 </div>
             </div>
             <div class="col-md-6  col-lg-3">
                 <div class="mb-8 mb-xl-0">
-                    <div class="mb-6"><img src="<?php echo BASE_URL; ?>assets/images/icons/gift.svg" alt=""></div>
+                    <div class="mb-6"><img src="<?php echo BASE_URL; ?>assets/img/icons/gift.svg" alt=""></div>
                     <h3 class="h5 mb-3">Mejores Precios y Ofertas</h3>
-                    <p>Precios más bajos que en tu supermercado local, con grandes ofertas de reembolso. Obtén los mejores precios y ofertas.</p>
+                    <p>Precios más bajos que en tu supermercado local, con grandes ofertas de reembolso. Obtén los
+                        mejores precios y ofertas.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="mb-8 mb-xl-0">
-                    <div class="mb-6"><img src="<?php echo BASE_URL; ?>assets/images/icons/package.svg" alt=""></div>
+                    <div class="mb-6"><img src="<?php echo BASE_URL; ?>assets/img/icons/package.svg" alt=""></div>
                     <h3 class="h5 mb-3">Amplia Variedad</h3>
-                    <p>Elige entre más de 5000 productos en categorías como alimentos, cuidado personal, hogar, panadería, vegetales y no vegetales, entre otros.</p>
+                    <p>Elige entre más de 5000 productos en categorías como alimentos, cuidado personal, hogar,
+                        panadería, vegetales y no vegetales, entre otros.</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
                 <div class="mb-8 mb-xl-0">
-                    <div class="mb-6"><img src="<?php echo BASE_URL; ?>assets/images/icons/refresh-cw.svg" alt=""></div>
+                    <div class="mb-6"><img src="<?php echo BASE_URL; ?>assets/img/icons/refresh-cw.svg" alt=""></div>
                     <h3 class="h5 mb-3">Devoluciones Fáciles</h3>
-                    <p>¿No estás satisfecho con un producto? Devuélvelo en tu puerta y obtén un reembolso en pocas horas. Sin preguntas, nuestra <a href="#!">política</a>.</p>
+                    <p>¿No estás satisfecho con un producto? Devuélvelo en tu puerta y obtén un reembolso en pocas
+                        horas. Sin preguntas, nuestra <a href="#!">política</a>.</p>
                 </div>
             </div>
         </div>
@@ -1590,36 +896,36 @@
                         <div class="product productModal" id="productModal">
 
                             <div class="zoom" onmousemove="zoom(event)"
-                                style="background-image: url(<?php echo BASE_URL; ?>assets/images/products/product-single-img-1.jpg)">
+                                style="background-image: url(<?php echo BASE_URL; ?>assets/img/products/product-single-img-1.jpg)">
                                 <!-- img -->
-                                <img src="<?php echo BASE_URL; ?>assets/images/products/product-single-img-1.jpg"
+                                <img src="<?php echo BASE_URL; ?>assets/img/products/product-single-img-1.jpg"
                                     alt="">
                             </div>
 
 
                             <div>
                                 <div class="zoom" onmousemove="zoom(event)"
-                                    style="background-image: url(<?php echo BASE_URL; ?>assets/images/products/product-single-img-2.jpg)">
+                                    style="background-image: url(<?php echo BASE_URL; ?>assets/img/products/product-single-img-2.jpg)">
                                     <!-- img -->
-                                    <img src="<?php echo BASE_URL; ?>assets/images/products/product-single-img-2.jpg"
+                                    <img src="<?php echo BASE_URL; ?>assets/img/products/product-single-img-2.jpg"
                                         alt="">
                                 </div>
 
                             </div>
                             <div>
                                 <div class="zoom" onmousemove="zoom(event)"
-                                    style="background-image: url(<?php echo BASE_URL; ?>assets/images/products/product-single-img-3.jpg)">
+                                    style="background-image: url(<?php echo BASE_URL; ?>assets/img/products/product-single-img-3.jpg)">
                                     <!-- img -->
-                                    <img src="<?php echo BASE_URL; ?>assets/images/products/product-single-img-3.jpg"
+                                    <img src="<?php echo BASE_URL; ?>assets/img/products/product-single-img-3.jpg"
                                         alt="">
                                 </div>
 
                             </div>
                             <div>
                                 <div class="zoom" onmousemove="zoom(event)"
-                                    style="background-image: url(<?php echo BASE_URL; ?>assets/images/products/product-single-img-4.jpg)">
+                                    style="background-image: url(<?php echo BASE_URL; ?>assets/img/products/product-single-img-4.jpg)">
                                     <!-- img -->
-                                    <img src="<?php echo BASE_URL; ?>assets/images/products/product-single-img-4.jpg"
+                                    <img src="<?php echo BASE_URL; ?>assets/img/products/product-single-img-4.jpg"
                                         alt="">
                                 </div>
                             </div>
@@ -1631,28 +937,28 @@
                                 <div class="col-3">
                                     <div class="thumbnails-img">
                                         <!-- img -->
-                                        <img src="<?php echo BASE_URL; ?>assets/images/products/product-single-img-1.jpg"
+                                        <img src="<?php echo BASE_URL; ?>assets/img/products/product-single-img-1.jpg"
                                             alt="">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="thumbnails-img">
                                         <!-- img -->
-                                        <img src="<?php echo BASE_URL; ?>assets/images/products/product-single-img-2.jpg"
+                                        <img src="<?php echo BASE_URL; ?>assets/img/products/product-single-img-2.jpg"
                                             alt="">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="thumbnails-img">
                                         <!-- img -->
-                                        <img src="<?php echo BASE_URL; ?>assets/images/products/product-single-img-3.jpg"
+                                        <img src="<?php echo BASE_URL; ?>assets/img/products/product-single-img-3.jpg"
                                             alt="">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="thumbnails-img">
                                         <!-- img -->
-                                        <img src="<?php echo BASE_URL; ?>assets/images/products/product-single-img-4.jpg"
+                                        <img src="<?php echo BASE_URL; ?>assets/img/products/product-single-img-4.jpg"
                                             alt="">
                                     </div>
                                 </div>
@@ -1699,7 +1005,8 @@
                                     <a class="btn btn-light" href="#" data-bs-toggle="tooltip" data-bs-html="true"
                                         title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
                                     <a class="btn btn-light" href="pages/shop-wishlist.html" data-bs-toggle="tooltip"
-                                        data-bs-html="true" title="Lista de deseos"><i class="feather-icon icon-heart"></i></a>
+                                        data-bs-html="true" title="Lista de deseos"><i
+                                            class="feather-icon icon-heart"></i></a>
                                 </div>
                             </div>
                             <hr class="my-6">
@@ -1724,7 +1031,8 @@
                                         </tr>
                                         <tr>
                                             <td>Envío:</td>
-                                            <td><small>Envío en 1 día. <span class="text-muted">(Recogida gratuita hoy)</span></small></td>
+                                            <td><small>Envío en 1 día. <span class="text-muted">(Recogida gratuita
+                                                        hoy)</span></small></td>
 
                                         </tr>
 

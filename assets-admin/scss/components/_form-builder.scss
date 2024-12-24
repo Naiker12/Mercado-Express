@@ -1,0 +1,66 @@
+/**=====================
+  2.15 Form-builder CSS Start
+==========================**/
+.component {
+  cursor: pointer;
+
+  label {
+    padding-top: 8px;
+  }
+
+  .form-group {
+
+    input,
+    textarea,
+    select {
+      border-radius: 4px;
+    }
+
+  }
+}
+
+input {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.popover {
+  .controls {
+    margin-left: 0;
+  }
+
+  .control-label {
+    text-align: left;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .fade.left.in {
+    left: -215px;
+  }
+}
+
+.drag {
+  form {
+    padding: 10px 5px;
+    border: 1px dotted $light-gray;
+    position: absolute;
+    background: $white;
+    box-shadow: 0 0 30px $light-gray;
+    overflow: hidden;
+
+    input {
+      border-radius: 5px;
+    }
+  }
+}
+
+
+/**=====================
+  2.15 Form-builder CSS Ends
+==========================**/

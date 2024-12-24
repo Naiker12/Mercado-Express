@@ -14,7 +14,7 @@
                     </div>
                     <div class="p-6">
                         <!-- imagen -->
-                        <img src="../assets/images/svg-graphics/store-graphics.svg" alt="" class="img-fluid">
+                        <img src="../assets/img/svg-graphics/store-graphics.svg" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-1.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-1.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -84,7 +84,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-2.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-2.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -116,7 +116,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-3.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-3.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -148,7 +148,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-4.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-4.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -186,7 +186,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-5.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-5.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -218,7 +218,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-6.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-6.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -250,7 +250,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-7.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-7.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -288,7 +288,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-8.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-8.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -320,7 +320,7 @@
                 <div class="card flex-row p-8 card-product">
                     <div>
                         <!-- imagen -->
-                        <img src="../assets/images/stores-logo/stores-logo-9.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-9.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- contenido -->
@@ -365,7 +365,7 @@
                 <div class="card flex-row p-8 card-product  ">
                     <div>
                         <!-- img -->
-                        <img src="../assets/images/stores-logo/stores-logo-4.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-4.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- content -->
@@ -402,7 +402,7 @@
                 <div class="card flex-row p-8 card-product ">
                     <div>
                         <!-- img -->
-                        <img src="../assets/images/stores-logo/stores-logo-5.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-5.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- content -->
@@ -434,7 +434,7 @@
                 <div class="card flex-row p-8 card-product ">
                     <div>
                         <!-- img -->
-                        <img src="../assets/images/stores-logo/stores-logo-6.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-6.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- content -->
@@ -466,7 +466,7 @@
                 <div class="card flex-row p-8 card-product ">
                     <div>
                         <!-- img -->
-                        <img src="../assets/images/stores-logo/stores-logo-7.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-7.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- content -->
@@ -503,7 +503,7 @@
                 <div class="card flex-row p-8 card-product ">
                     <div>
                         <!-- img -->
-                        <img src="../assets/images/stores-logo/stores-logo-8.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-8.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- content -->
@@ -535,7 +535,7 @@
                 <div class="card flex-row p-8 card-product ">
                     <div>
                         <!-- img -->
-                        <img src="../assets/images/stores-logo/stores-logo-9.svg" alt=""
+                        <img src="../assets/img/stores-logo/stores-logo-9.svg" alt=""
                             class="rounded-circle icon-shape icon-xl">
                     </div>
                     <!-- content -->

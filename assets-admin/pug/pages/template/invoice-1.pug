@@ -1,0 +1,216 @@
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var counter               = true;
+- var print                 = true;
+- var sidebar               = true;
+- var slick                 = true;
+- var header_slider         = true;
+- var scrollbar             = true;
+
+  
+ 
+//- all mixin  
+include ../../mixin/mixin
+ 
+doctype html
+html(lang='en')
+  include ../../components/header-files 
+  head
+    style(type='text/css').
+      body{
+        font-family: 'Montserrat', sans-serif;
+      }
+      .invoice-1.table-wrapper {
+        width: 1160px;
+        margin: 0 auto;
+      }
+      .invoice-1 h2 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 40px;
+      } 
+      .invoice-1 h6 {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0;
+      }
+      .invoice-1 span {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+      .invoice-1 .banner-image {
+        margin: 13px 0 10px;
+      }
+      .invoice-1 .order-details td span {
+        margin-bottom: -4px;
+        display: block;
+      }
+      .invoice-1 .order-details th:first-child, .order-details td:first-child {
+        min-width: 490px;
+      }
+      .invoice-1 .order-details th:nth-child(2), .order-details td:nth-child(2) {
+        width: 20%;
+      }
+      @media (max-width: 1199px) {
+        .invoice-1 .table-wrapper { 
+          width: 930px;
+        }
+        .invoice-1 .address {
+          width: 21% !important;
+        }
+      } 
+  body 
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body 
+          .container-fluid         
+            .page-title    
+              .row
+                .col-6
+                  h4
+                    | Ecommerce
+                .col-6 
+                  ol.breadcrumb
+                    li.breadcrumb-item  
+                      a(href='index.html')
+                        svg.stroke-icon   
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
+                    li.breadcrumb-item Invoice
+                    li.breadcrumb-item.active Invoice-1
+          // Container-fluid starts 
+          .container-fluid
+            table.table-wrapper.invoice-1
+              tbody
+                tr 
+                  td
+                    table(style='width: 100%;').logo-wrappper
+                      tbody
+                        tr
+                          td
+                            img.img-fluid.for-light(src='../assets/images/logo/logo_dark.png', alt='logo-light')
+                            img.img-fluid.for-dark(src='../assets/images/logo/logo.png', alt='logo-dark')
+                            span(style="opacity: 0.8;display:block;margin-top: 10px;") 202-555-0258
+                          td.address(style='text-align: right; opacity: 0.8; width: 16%;')
+                            span 1982 Harvest Lane 
+                                |  New York, NY12210
+                                |  United State
+                tr 
+                  td
+                    img.banner-image(src='../assets/images/email-template/invoice-1/1.png', alt='background')
+                tr 
+                  td
+                    table.bill-content(style='width: 100%;')
+                      tbody
+                        tr 
+                          td(style="width: 36%")
+                            span(style="opacity: 0.8;") Billed To
+                            h6(style="width: 46%") Riho Matchett Vandelay Group LTD 
+                          td(style="width: 21%;") 
+                            span(style="opacity: 0.8;") Invoice Date
+                            h6 09/03/2024
+                          td
+                            span(style="opacity: 0.8;") Invoice Number
+                            h6 #VL25000365
+                          td(style="text-align: right;")
+                            span(style="opacity: 0.8;") Amount Dus (USD)
+                            h2 $10,908.00
+                        tr 
+                          td(style="width: 36%")
+                            h6(style="width: 63%;padding-top: 20px;") 2118 Thornridge Cir. Syracuse, Connecticut 35624, United State
+                tr 
+                  td 
+                    table.order-details(style='width: 100%;border-collapse: separate;border-spacing: 0 10px;')
+                      thead 
+                        tr(style="background: #006666 ;border-radius: 8px;overflow: hidden;box-shadow: 0px 10.9412px 10.9412px rgba(82, 77, 141, 0.04), 0px 9.51387px 7.6111px rgba(82, 77, 141, 0.06), 0px 5.05275px 4.0422px rgba(82, 77, 141, 0.0484671);border-radius: 5.47059px;") 
+                          th(style="padding: 18px 15px;border-top-left-radius: 8px;border-bottom-left-radius: 8px;text-align: left")
+                            span(style="color: #fff;") Description
+                          th(style="padding: 18px 15px;text-align: left")
+                            span(style="color: #fff;") Rate
+                          th(style="padding: 18px 15px;text-align: left")
+                            span(style="color: #fff;") Qty
+                          th(style="padding: 18px 15px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;text-align: right")
+                            span(style="color: #fff;") Line Total
+                      tbody 
+                        tr(style="box-shadow: 0px 10.9412px 10.9412px rgba(82, 77, 141, 0.04), 0px 9.51387px 7.6111px rgba(82, 77, 141, 0.06), 0px 5.05275px 4.0422px rgba(82, 77, 141, 0.0484671);border-radius: 5.47059px;") 
+                          td(style="padding: 18px 15px;display:flex;align-items: center;gap: 10px;")
+                            span(style="min-width: 7px;height: 7px;border: 4px solid #006666;background: #fff;border-radius: 100%;display: inline-block;")
+                            span Project
+                          td(style="padding: 18px 15px;")
+                            span $4,000.00
+                          td(style="padding: 18px 15px;") 
+                            span 1
+                          td(style="padding: 18px 15px;text-align: right")
+                            span $4,000.00
+                        tr(style="box-shadow: 0px 10.9412px 10.9412px rgba(82, 77, 141, 0.04), 0px 9.51387px 7.6111px rgba(82, 77, 141, 0.06), 0px 5.05275px 4.0422px rgba(82, 77, 141, 0.0484671);border-radius: 5.47059px;") 
+                          td(style="padding: 18px 15px;display:flex;align-items: center;gap: 10px;")
+                            span(style="min-width: 7px;height: 7px;border: 4px solid #FE6A49;background: #fff;border-radius: 100%;display: inline-block;")
+                            span Creative Design
+                          td(style="padding: 18px 15px;") 
+                            span $8,000.00
+                          td(style="padding: 18px 15px;") 
+                            span 2
+                          td(style="padding: 18px 15px;text-align: right") 
+                            span $16,000.00
+                        tr(style="box-shadow: 0px 10.9412px 10.9412px rgba(82, 77, 141, 0.04), 0px 9.51387px 7.6111px rgba(82, 77, 141, 0.06), 0px 5.05275px 4.0422px rgba(82, 77, 141, 0.0484671);border-radius: 5.47059px;") 
+                          td(style="padding: 18px 15px;display:flex;align-items: center;gap: 10px;")
+                            span(style="min-width: 7px;height: 7px;border: 4px solid #00AC46;background: #fff;border-radius: 100%;display: inline-block;")
+                            span Web Development
+                          td(style="padding: 18px 15px;")  
+                            span $2,000.00
+                          td(style="padding: 18px 15px;") 
+                            span 2 
+                          td(style="padding: 18px 15px;text-align: right") 
+                            span $4,000.00
+                        tr(style="box-shadow: 0px 10.9412px 10.9412px rgba(82, 77, 141, 0.04), 0px 9.51387px 7.6111px rgba(82, 77, 141, 0.06), 0px 5.05275px 4.0422px rgba(82, 77, 141, 0.0484671);border-radius: 5.47059px;") 
+                          td(style="padding: 18px 15px;display:flex;align-items: center;gap: 10px;")
+                            span(style="min-width: 7px;height: 7px;border: 4px solid #FFAE1A;background: #fff;border-radius: 100%;display: inline-block;")
+                            span Graphics Design
+                          td(style="padding: 18px 15px;") 
+                            span $2,000.00
+                          td(style="padding: 18px 15px;") 
+                            span 1
+                          td(style="padding: 18px 15px;text-align: right") 
+                            span $2,000.00
+                        tr 
+                          td 
+                          td 
+                          td(style="padding: 5px 0; padding-top: 15px;") 
+                            span(style="") Subtotal
+                          td(style="padding: 5px 0;text-align: right;padding-top: 15px;")
+                            span $26,000.00
+                        tr 
+                          td 
+                          td 
+                          td(style="padding: 5px 0;padding-top: 0;") 
+                            span(style="") Tax(5%)
+                          td(style="padding: 5px 0;text-align: right;padding-top: 0;")
+                            span $1,000.00
+                        tr 
+                          td 
+                          td 
+                          td(style="padding: 10px 0;") 
+                            span(style="font-weight: 600;") Amount Due (USD)
+                          td(style="padding: 10px 0;text-align: right")
+                            span(style="font-weight: 600;") $27,000.00
+              tr(style="width: 100%; display: flex; justify-content: space-between; margin-top: 12px;")
+                td 
+                  img(src="../assets/images/email-template/invoice-1/sign.png" alt="sign")
+                  span(style="display:block;background: rgba(82, 82, 108, 0.3);height: 1px;width: 200px;margin-bottom:10px;")
+                  span(style="color: rgba(82, 82, 108, 0.8);") Authorized Sign
+                td
+                  span(style="display: flex; justify-content: end; gap: 15px;")
+                    a(style="background: #006666 ; color:rgba(255, 255, 255, 1); border-radius: 10px;padding: 18px 27px;font-size: 16px;font-weight: 600;outline: 0;border: 0; text-decoration: none;" href="#!" onclick="window.print();") Print Invoice
+                      i.icon-arrow-right(style="font-size:13px;font-weight:bold; margin-left: 10px;")
+                    a(style="background: rgba(0, 102, 102, 0.2);color: #006666 ; border-radius: 10px;padding: 18px 27px;font-size: 16px;font-weight: 600;outline: 0;border: 0; text-decoration: none;" href="../template/invoice-1.html" download='') Download
+                      i.icon-arrow-right(style="font-size:13px;font-weight:bold; margin-left: 10px;")
+                  // Container-fluid Ends
+        include ../../components/footer        
+    include ../../components/footer-files

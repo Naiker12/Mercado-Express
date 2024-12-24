@@ -1,0 +1,89 @@
+
+//- ====== Orders Table  ====== -//
+- 
+    var TODAY_WORK=
+        {
+            body:[
+                {
+                    title:"App Design",
+                    subTitle:"NFT Illustration...",
+                    customerName: "Assigned to",
+                    userId:"Cody Fisher",
+                    price:"Days Left",
+                    paymentMethod:"02",
+                    statusBg:"light-primary",
+                    status:"High",
+                },
+                {
+                    title:"App Design",
+                    subTitle:"NFT Illustration...",
+                    customerName: "Arlene McCoy",
+                    userId:"Assigned to",
+                    price:"Days Left",
+                    paymentMethod:"12",
+                    statusBg:"light-primary",
+                    status:"High",
+                },
+                {
+                    title:"Web Design",
+                    subTitle:"Appron’s 3D Co...",
+                    customerName: "Assigned to",
+                    userId:"Kristin Watson",
+                    price:"Days Left",
+                    paymentMethod:"12",
+                    statusBg:"light-warning",
+                    status:"Medium",
+                },
+                {
+                    title:"Desktop App",
+                    subTitle:"Rental Car", 
+                    customerName: "Assigned to",
+                    userId:"Darlene Robertson",
+                    price:"Days Left",
+                    paymentMethod:"05",
+                    statusBg:"light-secondary",
+                    status:"low",
+                },
+                {
+                    title:"Template Design",
+                    subTitle:"E-commerce", 
+                    customerName: "Assigned to",
+                    userId:"Wade Warren",
+                    price:"Days Left",
+                    paymentMethod:"31",
+                    statusBg:"light-primary",
+                    status:"High",
+                },
+                {
+                    title:"App Design",
+                    subTitle:"Food Delivery", 
+                    customerName: "Assigned to",
+                    userId:"Smith John",
+                    price:"Days Left",
+                    paymentMethod:"20",
+                    statusBg:"light-warning",
+                    status:"Medium",
+                },
+            ]    
+        };
+
+//- ====================
+//- Today's work table 
+//- ====================
+
+table(class='today-working-table w-100') 
+    tbody
+        each bodyData in TODAY_WORK.body 
+            tr
+                td
+                    span(class="f-w-500 f-light d-block f-12 mb-1")=bodyData.title 
+                    a(href="product.html" class="f-w-500 f-14")=bodyData.subTitle 
+                td 
+                    span(class="f-w-500 f-light d-block f-12 mb-1")=bodyData.customerName
+                    a(href="product.html" class="f-w-500 f-14")=bodyData.userId
+                td
+                     span(class="f-w-500 f-light d-block f-12 mb-1")=bodyData.price
+                     a(href="product.html" class="f-w-500 f-14")=bodyData.paymentMethod
+                td(class="text-end")
+                    div(class=`badge-${bodyData.statusBg} product-sub badge rounded-pill `)
+                            span=bodyData.status

@@ -1,0 +1,119 @@
+//- =====================
+//-  activity-log
+//- =====================
+-
+    var ACTIVITY_LOG= 
+      [
+         {
+            image:"26.png",
+            name:"Jenny Wilson",
+            time:"Today 10:45 AM", 
+            appName:"Commented on : ",
+            webName:" NFT App",
+            subTitle:"This smithe design looks great!! but this page as i mention belove.",
+         },
+         {
+            image:"34.png",
+            name:"Darlene Robertson",
+            time: "Today 10:43 AM",  
+            appName:"Shared File to : ",
+            webName:"Barkha",
+            subTitle:"Food Delivery App figma & Ai file shared to a .zip file to make it easier to send.",    
+         },
+         {
+            image:"35.png",
+            name:"Seema Joshi",
+            time:"Today 10:42 AM",
+            appName:"Meeting : ",
+            webName:"Eva Website",
+            subTitle:"You can send the AI file as attachment service and share a download link.", 
+            userName: "@barkha_singh",
+         },
+         {
+            image:"44.png",
+            name:"Elara Winter",
+            time:"Today 06:45 AM",
+            appName:"Meeting : ",
+            webName:"Eva Website",
+            subTitle:"Metting about next page design of eva website.", 
+         },
+         {
+            image:"38.png",
+            name:"Arya Shwanno",
+            time:"Today 05:51 AM",
+            appName:"Add new screen :",
+            webName:"Pet App",
+            subTitle:"Make sure your AI file is  cloud storage like Google Drive or Dropbox.",
+         }, 
+      ]
+//- ====== Orders Table  ====== -//
+- 
+    var LATEST_TRANSACTION=
+        {
+            header:["Name" , "Date" , "Amount" ,"Status"],
+            body:[
+                {
+                    title:"Darrell Steward",
+                    date:"16 Nov, 2024",
+                    price:"$456.23",
+                    statusColor:"primary",
+                    status:"Complete",
+                },
+                {
+                    title:"Floyd Miles",
+                    date:"22 Jan, 2024",
+                    price:"$550.73",
+                    statusColor:"secondary",
+                    status:"Failed",
+                },
+                {
+                    title:"Ralph Edwards",
+                    date:"31 Dec, 2024",
+                    price:"$785.26",
+                    statusColor:"primary",
+                    status:"Complete",
+                },  
+                {
+                    title:"Jerome Bell",
+                    date:"16 Nov, 2024",
+                    price:"$458.14",
+                    statusColor:"secondary",
+                    status:"Failed",
+                },
+                {
+                    title:"Theresa Webb",
+                    date:"16 Feb, 2024",
+                    price:"$263.24",
+                    statusColor:"primary",
+                    status:"Complete",
+                },
+                {
+                    title:"Courtney Henry",
+                    date:"01 Nov, 2024",
+                    price:"$785.14",
+                    statusColor:"primary",
+                    status:"Complete",
+                },
+            ]  
+        };
+
+
+//- ==================
+//- Activity-log  
+//- ==================
+mixin  activity-log(data)
+  ul 
+    each item in data
+        li(class="activity-log")
+          div(class="d-flex align-items-start gap-2")
+            img(class="activity-log-img rounded-circle img-fluid me-2" src=`../assets/images/user/${item.image}` alt=`user`)
+            div 
+              div(class="common-space user-id")
+                h6 
+                  a(href="user-profile.html" class="f-w-500 f-12")=item.name
+                span(class="f-light f-w-500 f-12")=item.time
+              div(class="d-flex mb-2")
+                span(class="f-light f-w-500 f-12")=item.appName 
+                a(href="blog.html" class="f-w-500 f-12")=item.webName
+              span(class="f-light f-w-500 f-12 d-block")=item.subTitle  
+              a(href="user-profile.html" class="f-12 f-w-500 username")=item.userName

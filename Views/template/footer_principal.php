@@ -1,3 +1,90 @@
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header border-bottom">
+        <div class="text-start">
+            <h5 id="offcanvasRightLabel" class="mb-0 fs-4">Carrito de Compras</h5>
+            <small>Ubicación en 382480</small>
+        </div>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+
+    <div class="offcanvas-body">
+
+        <div class="alert alert-danger" role="alert">
+            ¡Tienes envío GRATIS! ¡Comienza el proceso de compra ahora!
+        </div>
+
+        <div>
+            <div class="py-3">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item py-3 px-0 border-top">
+                        <div class="row align-items-center">
+                            <div class="col-2">
+                                <img src="<?php echo BASE_URL; ?>assets/img/products/product-img-1.jpg" alt="Ecommerce"
+                                    class="img-fluid">
+                            </div>
+                            <div class="col-5">
+                                <h6 class="mb-0">Plátano Orgánico</h6>
+                                <span><small class="text-muted">.98 / lb</small></span>
+                                <div class="mt-2 small"> <a href="#!" class="text-decoration-none"> <span class="me-1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-trash-2">
+                                                <polyline points="3 6 5 6 21 6"></polyline>
+                                                <path
+                                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                                </path>
+                                                <line x1="10" y1="11" x2="10" y2="17"></line>
+                                                <line x1="14" y1="11" x2="14" y2="17"></line>
+                                            </svg></span>Eliminar</a></div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group  flex-nowrap justify-content-center  ">
+                                    <input type="button" value="-"
+                                        class="button-minus form-control  text-center flex-xl-none w-xl-30 w-xxl-10 px-0  "
+                                        data-field="quantity">
+                                    <input type="number" step="1" max="10" value="1" name="quantity"
+                                        class="quantity-field form-control text-center flex-xl-none w-xl-30 w-xxl-10 px-0 ">
+                                    <input type="button" value="+"
+                                        class="button-plus form-control  text-center flex-xl-none w-xl-30  w-xxl-10 px-0  "
+                                        data-field="quantity">
+                                </div>
+                            </div>
+                            <div class="col-2 text-end">
+                                <span class="fw-bold">$35.00</span>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="d-grid">
+
+                <button class="btn btn-primary btn-lg d-flex justify-content-between align-items-center" type="submit">
+                    Ir a Pagar <span class="fw-bold">$120.00</span></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Modal -->
 <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="userModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -262,22 +349,20 @@ function toggleForm() {
                     <ul class="list-inline mb-0">
                         <li class="list-inline-item text-dark">Socios de pago</li>
                         <li class="list-inline-item">
-                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/images/payment/amazonpay.svg"
+                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/img/payment/amazonpay.svg" alt=""></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/img/payment/american-express.svg"
                                     alt=""></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/images/payment/american-express.svg"
-                                    alt=""></a>
+                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/img/payment/mastercard.svg" alt=""></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/images/payment/mastercard.svg"
-                                    alt=""></a>
+                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/img/payment/paypal.svg" alt=""></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/images/payment/paypal.svg" alt=""></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/images/payment/visa.svg" alt=""></a>
+                            <a href="#!"><img src="<?php echo BASE_URL; ?>assets/img/payment/visa.svg" alt=""></a>
                         </li>
                     </ul>
                 </div>
@@ -285,11 +370,11 @@ function toggleForm() {
                     <ul class="list-inline mb-0 text-lg-end text-center">
                         <li class="list-inline-item mb-2 mb-md-0 text-dark">Reciba entregas con Mercado Express</li>
                         <li class="list-inline-item ms-4">
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/appbutton/appstore-btn.svg"
-                                    alt="" style="width: 140px;"></a>
+                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/img/appbutton/appstore-btn.svg" alt=""
+                                    style="width: 140px;"></a>
                         </li>
                         <li class="list-inline-item">
-                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/images/appbutton/googleplay-btn.svg"
+                            <a href="#!"> <img src="<?php echo BASE_URL; ?>assets/img/appbutton/googleplay-btn.svg"
                                     alt="" style="width: 140px;"></a>
                         </li>
                     </ul>
@@ -353,9 +438,40 @@ function toggleForm() {
 <script src="<?php echo BASE_URL; ?>assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/libs/dropzone/dist/min/dropzone.min.js"></script>
 <script src="<?php echo BASE_URL; ?>assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/sweetalert2.all.min.js"></script>
 
 <!-- Theme JS -->
 <script src="<?php echo BASE_URL; ?>assets/js/theme.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+<script>
+const base_url = '<?php echo BASE_URL; ?>';
+
+function alertaPerzanalizada(mensaje, type, titulo = '') {
+    toastr[type](mensaje, titulo);
+
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    };
+}
+</script>
+
+<script src="<?php echo BASE_URL ;?>assets/js/carrito.js"></script>
 
 </body>
 

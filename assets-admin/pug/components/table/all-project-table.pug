@@ -1,0 +1,133 @@
+
+//- ====== Orders Table  ====== -//
+- 
+    var ALL_PROJECT=
+        {
+            header:["Project Name" , "Client Name" , "End Date" ,"Assigned to", "Status" ,"Progress"],
+            body:[
+                {
+                    id: "dropdownMenuButtonicon11",
+                    chartId: "widgetsChart1",
+                    projectName : "Pet App Design",
+                    customerName:"Darrell Steward",
+                    userId : "darrells@example.com",
+                    date: "15 Nov, 2024",
+                    day: "8 Days Left",
+                    assigned: "Team Roha",
+                    member: "12 Member",
+                    statusColor:"primary",
+                    status:"Active",
+                    iconName: "more-horizontal",
+                },
+                { 
+                    id: "dropdownMenuButtonicon12",
+                    chartId: "widgetsChart2",
+                    projectName : "Chain Desktop App",
+                    customerName:"Eleanor Pena",
+                    userId : "pena12@example.com",
+                    date: "20 Nov, 2024",
+                    day: "13 Days Left",
+                    assigned: "Team Suresh",
+                    member: "10 Member", 
+                    statusColor:"warning",
+                    status:"On Hold",
+                    iconName: "more-horizontal"
+                },
+                {
+                    id: "dropdownMenuButtonicon13",
+                    chartId: "widgetsChart3",
+                    projectName : "Business Web Design",
+                    customerName:"Robert Fox",
+                    userId : "foxxxx8s@example.com",
+                    date: "22 Nov, 2024",
+                    day: "15 Days Left",
+                    assigned: "Team Liza",
+                    member: "7 Member",
+                    statusColor:"secondary",
+                    status:"Pending",
+                    iconName: "more-horizontal"
+                },
+                 {
+                    id: "dropdownMenuButtonicon14",
+                    chartId: "widgetsChart4",
+                    projectName : "NFT App Design",
+                    customerName:"Arlene McCoy",
+                    userId : "arlene78@example.com",
+                    date: "28 Nov, 2024",
+                    day: "21 Days Left",
+                    assigned: "Team Sulekha",
+                    member: "9 Member",
+                    statusColor:"primary",
+                    status:"Active",
+                    iconName: "more-horizontal"
+                },
+                 { 
+                    id: "dropdownMenuButtonicon15",
+                    chartId: "widgetsChart5",
+                    projectName : "Digital Avtar Web Design",
+                    customerName:"Courtney Henry",
+                    userId : "henry45@example.com",
+                    date: "2 Dec, 2024",
+                    day: "25 Days Left",
+                    assigned: "Team Shreena",
+                    member: "12 Member",
+                    statusColor:"primary",
+                    status:"Active",
+                    iconName: "more-horizontal"
+                },
+            ]    
+        };
+
+//- ====================
+//- Orders Table 
+//- ====================
+
+table(class='order-table project-table w-100')
+    thead 
+        tr 
+            each head in ALL_PROJECT.header
+                th=  head
+    tbody
+        each bodyData in ALL_PROJECT.body 
+            tr
+                td
+                    div(class="project-comment  d-flex gap-2")
+                        .radial-chart-wrap
+                            div(id=`${bodyData.chartId}` class="widgetsChart")
+                        div 
+                            a(href="product.html" class="f-w-500 f-14 ")=bodyData.projectName
+                            div(class="project-comment-icon")
+                              div(class="project-link")
+                                svg
+                                  use(href="../assets/svg/icon-sprite.svg#messages-2")
+                                span(class="f-w-500 f-light f-12") 20
+                              div(class="project-link")
+                                svg
+                                  use(href="../assets/svg/icon-sprite.svg#paperclip")
+                                span(class="f-w-500 f-light f-12") 7
+                td
+                    div(class="product-sub")
+                        a(href="product.html" class="f-w-500 f-14 ")=bodyData.customerName
+                        span(class="f-w-500 f-light f-12 d-block")=bodyData.userId 
+                td
+                    div(class="product-sub")
+                        a(href="product.html" class="f-w-500 f-14 ")=bodyData.date
+                        span(class="f-w-500 f-light f-12 d-block")=bodyData.day
+                td
+                    div(class="product-sub")
+                        a(href="product.html" class="f-w-500 f-14 ")=bodyData.assigned
+                        span(class="f-w-500 f-light f-12 d-block")=bodyData.member 
+                td 
+                    div(class=`txt-${bodyData.statusColor} d-flex gap-2 align-items-center justify-content-center`)
+                      span.pending(class=`bg-${bodyData.statusColor}`)
+                      span(class=`f-w-500 f-13 txt-${bodyData.statusColor}`)=bodyData.status
+                td
+                    div(class="product-sub")  
+                        .dropdown 
+                          div(id=bodyData.id data-bs-toggle='dropdown', aria-expanded='false' role="menu")
+                            svg(class="invoice-icon") 
+                                use(href=`../assets/svg/icon-sprite.svg#${bodyData.iconName}`)
+                          .dropdown-menu.dropdown-menu-end(aria-labelledby=`${bodyData.id}`)
+                            span.dropdown-item Last Month
+                            span.dropdown-item Last Week
+                            span.dropdown-item Last Day 

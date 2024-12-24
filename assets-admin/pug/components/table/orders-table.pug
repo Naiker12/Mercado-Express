@@ -1,0 +1,91 @@
+
+//- ====== Orders Table  ====== -//
+- 
+    var ORDERS_TABLE=
+        {
+            header:["Order ID" , "Billing Name" , "Amount" ,"Status", "Invoice"],
+            body:[
+                {
+                    image:"1.png",
+                    title:"Winter Jecket",
+                    subTitle:"ID : 4859578",
+                    customerName: "Amit Shah",
+                    userId:"amith14@gmail.com",
+                    price:"₹1500.45",
+                    paymentMethod:"Google Pay",
+                    statusBg:"light-primary",
+                    status:"Delivered",
+                    iconName:"fream",
+                },
+                {
+                    image:"2.png",
+                    title:"Casual Trousere",
+                    subTitle:"ID : 4875566",
+                    customerName: "Arlene McCoy",
+                    userId:"arlene1@gmail.com",
+                    price:"₹785.62",
+                    paymentMethod:"Credit Card",
+                    statusBg:"light-warning",
+                    status:"Shipped",
+                    iconName:"fream",
+                },
+                {
+                    image:"3.png",
+                    title:"Silk Saree",
+                    subTitle:"ID : 7894561",
+                    customerName: "Marvin McKinney",
+                    userId:"marvin4@gmail.com",
+                    price:"₹2000.02",
+                    paymentMethod:"Debit Card",
+                    statusBg:"light-secondary",
+                    status:"Processing",
+                    iconName:"fream",
+                },
+                {
+                    image:"4.png",
+                    title:"Men’s Loafers",
+                    subTitle:"ID : 1234567", 
+                    customerName: "Annette Black",
+                    userId:"black45@gmail.com",
+                    price:"₹1589.25",
+                    paymentMethod:"Pay Pal",
+                    statusBg:"light-light",
+                    status:"Cancelled",
+                    iconName:"fream",
+                },
+            ]    
+        };
+
+//- ====================
+//- Orders Table 
+//- ====================
+
+table(class=' latest-orders w-100')
+    thead
+        tr
+            each head in ORDERS_TABLE.header
+                th=  head
+    tbody
+        each bodyData in ORDERS_TABLE.body
+            tr
+                td
+                    div(class="product-name")
+                        img(class="order-table-images img-fluid" src=`../assets/images/dashboard/order-table/${bodyData.image}` alt=`product`)
+                        div(class="product-sub") 
+                            a(href="product.html" class=" f-14 f-w-500 ")=bodyData.title 
+                            span(class="f-light f-14 f-w-500 d-block")=bodyData.subTitle
+                td
+                    div(class="product-sub")
+                        a(href="product.html" class="f-14 f-w-500")=bodyData.customerName
+                        span(class="f-light f-14 f-w-500 d-block")=bodyData.userId 
+                td
+                    div(class="product-sub") 
+                        a(href="product.html" class="f-14 f-w-500")=bodyData.price
+                        span(class="f-light f-14 f-w-500 d-block")=bodyData.paymentMethod
+                td
+                    div(class=`badge-${bodyData.statusBg} product-sub badge rounded-pill`)
+                        span=bodyData.status 
+                td
+                    div(class="product-sub")
+                        svg(class="invoice-icon")
+                            use(href=`../assets/svg/icon-sprite.svg#${bodyData.iconName}`)

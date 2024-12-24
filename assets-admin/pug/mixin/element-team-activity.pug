@@ -1,0 +1,64 @@
+//- =====================
+//-  activity-log
+//- =====================
+-
+    var ACTIVITY_LOG= 
+      [
+         {
+            image:"26.png",
+            name:"Jenny Wilson",
+            time:"Today 10:45 AM", 
+            appName:"Commented on : ",
+            webName:" NFT App",
+            subTitle:"This smithe design looks great!! but this page as i mention belove.",
+         },
+         {
+            image:"34.png",
+            name:"Darlene Robertson",
+            time: "Today 10:43 AM",  
+            appName:"Shared File to : ",
+            webName:"Barkha",
+            subTitle:"Food Delivery App figma & Ai file shared to a .zip file to make it easier to send.",    
+         },
+         {
+            image:"35.png",
+            name:"Seema Joshi",
+            time:"Today 10:42 AM",
+            appName:"Meeting : ",
+            webName:"Eva Website",
+            subTitle:"You can send the AI file as attachment service and share a download link.", 
+            userName: "@barkha_singh",
+         },
+         {
+            image:"44.png",
+            name:"Elara Winter",
+            time:"Today 06:45 AM",
+            appName:"Meeting : ",
+            webName:"Eva Website",
+            subTitle:"Metting about next page design of eva website.", 
+         },
+         {
+            image:"38.png",
+            name:"Arya Shwanno",
+            time:"Today 05:51 AM",
+            appName:"Add new screen :",
+            webName:"Pet App",
+            subTitle:"Make sure your AI file is  cloud storage like Google Drive or Dropbox.",
+         }, 
+      ]
+//- ==================
+//- team-activity
+//- ==================
+
+mixin team-activity(data)
+  ul(class="overflow-auto")
+    each item in data
+        li(class="activity-data").d-flex.align-items-center.gap-3
+            div(class="common-space") 
+                div(class="user-activity")
+                    img(class="rounded-circle p-1 img-fluid me-3 img-50" src=`../assets/images/user/${item.image}` alt=`user`)
+                    a(class="f-10 f-w-500" href="edit-profile.html")=item.userName
+                div(class="activity-time")
+                    span(class="f-light f-w-500 f-10")=item.postTime
+            div(class="subtitle")
+                p(class='f-w-400 f-10')=item.subTitle

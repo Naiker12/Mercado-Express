@@ -253,7 +253,7 @@
                     </div>
                     <!-- Contenido del Banner -->
                     <!-- Imagen del Banner -->
-                    <!-- img --><img src="../assets/images/banner/assortment-citrus-fruits.png" alt=""
+                    <!-- img --><img src="../assets/img/banner/assortment-citrus-fruits.png" alt=""
                         class="img-fluid rounded-3">
                     <!-- Imagen del Banner -->
                 </div>
@@ -303,6 +303,7 @@
                 <!-- row -->
                 <div class="row g-4 row-cols-xl-3 row-cols-lg-3 row-cols-2 row-cols-md-2 mt-2">
                     <!-- col -->
+                    <?php foreach ($data['productos'] as $producto) { ?>
                     <div class="col">
                         <!-- tarjeta -->
                         <div class="card card-product">
@@ -312,28 +313,37 @@
                                     <div class="position-absolute top-0 start-0">
                                         <span class="badge bg-danger">Oferta</span>
                                     </div>
-                                    <a href="#!">
-                                        <!-- img --><img src="../assets/images/products/product-img-1.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos" class="mb-3 img-fluid">
+                                    <a href="<?php echo BASE_URL; ?>principal/detail/<?php echo $producto['id']; ?>">
+                                        <!-- img -->
+                                        <img src="<?php echo BASE_URL . $producto['imagen']; ?>"
+                                            alt="Imagen del producto" class="mb-3 img-fluid"
+                                            style="max-height: 180px; object-fit: cover;">
                                     </a>
                                     <!-- botones de acción -->
                                     <div class="card-product-action">
                                         <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                            data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
+                                            data-bs-target="#quickViewModal">
+                                            <i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true"
+                                                title="Vista Rápida"></i>
+                                        </a>
+                                        <a href="#" class="btn-action btnAddDeseo" data-bs-toggle="tooltip"
+                                            data-bs-html="true" title="Lista de deseos" prod="<?php echo $producto['id']; ?>"><i class="bi bi-heart"></i></a>
                                         <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
                                             title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
                                     </div>
                                 </div>
+
                                 <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Snacks y
-                                            Aperitivos</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Haldiram's Sev
-                                        Bhujia</a></h2>
+                                <div class="text-small mb-1">
+                                    <a href="#!" class="text-decoration-none text-muted">
+                                        <small>Snacks y Aperitivos</small>
+                                    </a>
+                                </div>
+                                <h2 class="fs-6"><a
+                                        href="<?php echo BASE_URL; ?>principal/detail/<?php echo $producto['id']; ?>"
+                                        class="text-inherit text-decoration-none"><?php echo $producto['nombre']; ?></a>
+                                </h2>
+
                                 <div>
                                     <!-- calificación -->
                                     <small class="text-warning">
@@ -345,560 +355,59 @@
                                     </small>
                                     <span class="text-muted small">4.5(149)</span>
                                 </div>
-                                <!-- precio -->
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div><span class="text-dark">$18</span> <span
-                                            class="text-decoration-line-through text-muted">$24</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-                                <div class="text-center position-relative">
-                                    <div class="position-absolute top-0 start-0">
-                                        <span class="badge bg-success">14%</span>
-                                    </div>
-                                    <a href="#!">
-                                        <!-- img --><img src="../assets/images/products/product-img-2.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos" class="mb-3 img-fluid">
-                                    </a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Panadería y
-                                            Galletas</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">NutriChoice
-                                        Digestive </a>
-                                </h2>
-                                <div class="text-warning">
-                                    <!-- calificación -->
-                                    <small>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
-                                    </small>
-                                    <span class="text-muted small">4.5 (25)</span>
-                                </div>
-                                <!-- precio -->
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div><span class="text-dark">$24</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-                                <div class="text-center position-relative">
-                                    <a href="#!"><img src="../assets/images/products/product-img-3.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos"
-                                            class="mb-3 img-fluid"></a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Panadería y
-                                            Galletas</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Chocolate
-                                        Cadbury 5 Star</a>
-                                </h2>
-                                <div class="text-warning">
-                                    <!-- calificación -->
-                                    <small>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </small>
-                                    <span class="text-muted small">5 (469)</span>
-                                </div>
                                 <!-- precio -->
                                 <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div><span class="text-dark">$32</span> <span
-                                            class="text-decoration-line-through text-muted">$35</span>
+                                    <div>
+                                        <span class="text-dark"><?php echo MONEDA . ' ' . $producto['precio']; ?></span>
+                                        <span class="text-decoration-line-through text-muted">$24</span>
                                     </div>
                                     <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
+                                    <div>
+                                        <a href="#!" class="btn btn-primary btn-sm">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                                 stroke-linecap="round" stroke-linejoin="round"
                                                 class="feather feather-plus">
                                                 <line x1="12" y1="5" x2="12" y2="19"></line>
                                                 <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
+                                            </svg> Agregar
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-                                <div class="text-center position-relative">
-                                    <div class="position-absolute top-0">
-                                        <span class="badge bg-danger">Nuevo</span>
-                                    </div>
-
-                                    <a href="#!">
-                                        <!-- img --><img src="../assets/images/products/product-img-4.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos" class="mb-3 img-fluid">
-                                    </a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Snacks y
-                                            Aperitivos</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Papas con Sabor
-                                        a Cebolla</a></h2>
-                                <div class="text-warning">
-                                    <!-- calificación -->
-                                    <small>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
-                                        <i class="bi bi-star"></i>
-                                    </small>
-                                    <span class="text-muted small">3.5 (456)</span>
-                                </div>
-                                <!-- precio -->
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div><span class="text-dark">$3</span> <span
-                                            class="text-decoration-line-through text-muted">$5</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-                                <div class="text-center position-relative">
-                                    <a href="#!"><img src="../assets/images/products/product-img-5.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos"
-                                            class="mb-3 img-fluid"></a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Comida
-                                            Instantánea</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Palomitas de
-                                        Maíz
-                                        Instantáneas Saladas</a></h2>
-                                <div class="text-warning">
-                                    <!-- calificación -->
-                                    <small> <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5
-                                        (39)</span>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <div><span class="text-dark">$13</span> <span
-                                            class="text-decoration-line-through text-muted">$18</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-
-                                <!-- etiqueta -->
-                                <div class="text-center position-relative ">
-                                    <div class="position-absolute top-0 start-0">
-                                        <span class="badge bg-danger">Oferta</span>
-                                    </div>
-                                    <a href="#!">
-                                        <!-- img --><img src="../assets/images/products/product-img-6.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos" class="mb-3 img-fluid">
-                                    </a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip"
-                                            data-bs-html="true" title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Lácteos, Pan
-                                            y Huevos</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Yogur Griego de
-                                        Arándano</a></h2>
-                                <div>
-
-                                    <!-- calificación --> <small class="text-warning"> <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5
-                                        (189)</span>
-                                </div>
-                                <!-- precio -->
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div><span class="text-dark">$18</span> <span
-                                            class="text-decoration-line-through text-muted">$24</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-                                <div class="text-center position-relative">
-                                    <a href="#!"><img src="../assets/images/products/product-img-7.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos"
-                                            class="mb-3 img-fluid"></a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Lácteos, Pan
-                                            y Huevos</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Rebanadas de
-                                        Queso
-                                        Britannia</a></h2>
-                                <div class="text-warning">
-                                    <!-- calificación -->
-                                    <small> <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i></small> <span class="text-muted small">5
-                                        (345)</span>
-                                </div>
-                                <!-- precio -->
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div><span class="text-dark">$24</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-                                <div class="text-center position-relative">
-                                    <a href="#!"><img src="../assets/images/products/product-img-8.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos"
-                                            class="mb-3 img-fluid"></a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Comida
-                                            Instantánea</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Cereal Original
-                                        de
-                                        Kellogg's</a></h2>
-                                <div class="text-warning">
-                                    <!-- calificación -->
-                                    <small> <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4
-                                        (90)</span>
-                                </div>
-                                <!-- precio -->
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div><span class="text-dark">$32</span> <span
-                                            class="text-decoration-line-through text-muted">$35</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-                                <div class="text-center position-relative">
-                                    <a href="#!"><img src="../assets/images/products/product-img-9.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos"
-                                            class="mb-3 img-fluid"></a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Snacks y
-                                            Aperitivos</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Slurrp Millet
-                                        Chocolate</a></h2>
-                                <div class="text-warning">
-                                    <!-- calificación -->
-                                    <small> <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i></small> <span class="text-muted small">4.5
-                                        (67)</span>
-                                </div>
-                                <!-- precio -->
-                                <div class="d-flex justify-content-between align-items-center mt-3">
-                                    <div><span class="text-dark">$3</span> <span
-                                            class="text-decoration-line-through text-muted">$5</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- col -->
-                    <div class="col">
-                        <!-- tarjeta -->
-                        <div class="card card-product">
-                            <div class="card-body">
-                                <div class="text-center position-relative">
-                                    <a href="#!"><img src="../assets/images/products/product-img-10.jpg"
-                                            alt="Plantilla de Comercio Electrónico de Alimentos"
-                                            class="mb-3 img-fluid"></a>
-                                    <!-- botones de acción -->
-                                    <div class="card-product-action">
-                                        <a href="#!" class="btn-action" data-bs-toggle="modal"
-                                            data-bs-target="#quickViewModal"><i class="bi bi-eye"
-                                                data-bs-toggle="tooltip" data-bs-html="true"
-                                                title="Vista Rápida"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Lista de deseos"><i class="bi bi-heart"></i></a>
-                                        <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
-                                            title="Comparar"><i class="bi bi-arrow-left-right"></i></a>
-                                    </div>
-                                </div>
-                                <!-- encabezado -->
-                                <div class="text-small mb-1"><a href="#!"
-                                        class="text-decoration-none text-muted"><small>Lácteos, Pan
-                                            y Huevos</small></a></div>
-                                <h2 class="fs-6"><a href="#!" class="text-inherit text-decoration-none">Mantequilla Amul
-                                        -
-                                        500 g</a></h2>
-                                <div class="text-warning">
-                                    <!-- calificación -->
-                                    <small> <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-half"></i>
-                                        <i class="bi bi-star"></i></small> <span class="text-muted small">3.5
-                                        (89)</span>
-                                </div>
-                                <div class="d-flex justify-content-between mt-4">
-                                    <div><span class="text-dark">$13</span> <span
-                                            class="text-decoration-line-through text-muted">$18</span>
-                                    </div>
-                                    <!-- btn -->
-                                    <div><a href="#!" class="btn btn-primary btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-plus">
-                                                <line x1="12" y1="5" x2="12" y2="19"></line>
-                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            </svg> Agregar</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
+
                 <!-- row -->
                 <div class="row mt-8">
                     <div class="col">
                         <!-- nav -->
-                        <nav>
+                        <nav aria-label="Navegación de página">
                             <ul class="pagination">
-                                <li class="page-item disabled">
-                                    <a class="page-link  mx-1 rounded-3 " href="#" aria-label="Previous">
-                                        <i class="feather-icon icon-chevron-left"></i>
-                                    </a>
-                                </li>
-                                <li class="page-item "><a class="page-link  mx-1 rounded-3 active" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link mx-1 rounded-3 text-body" href="#">2</a></li>
+                                <?php
+                $anterior = $data['pagina'] - 1;
+                $siguiente = $data['pagina'] + 1;
+                $url = BASE_URL .'principal/shop/';
 
-                                <li class="page-item"><a class="page-link mx-1 rounded-3 text-body" href="#">...</a>
-                                </li>
-                                <li class="page-item"><a class="page-link mx-1 rounded-3 text-body" href="#">12</a></li>
-                                <li class="page-item">
-                                    <a class="page-link mx-1 rounded-3 text-body" href="#" aria-label="Next">
-                                        <i class="feather-icon icon-chevron-right"></i>
-                                    </a>
-                                </li>
+                if ($data['pagina'] > 1) {
+                    echo '<li class="page-item">
+                        <a class="page-link page-link-prev btn btn-primary btn-round" href="' . $url . $anterior . '" aria-label="Anterior" tabindex="-1" aria-disabled="true">
+                            <span aria-hidden="true"><i class="icon-long-arrow-left"></i></span>Anterior
+                        </a>
+                    </li>';
+                }
+                
+                if ($data['total'] >= $siguiente) {
+                    echo '<li class="page-item">
+                        <a class="page-link page-link-next btn btn-primary btn-round" href="' . $url . $siguiente . '" aria-label="Siguiente">
+                            Siguiente<span aria-hidden="true"><i class="icon-long-arrow-right"></i></span>
+                        </a>
+                    </li>';
+                }
+            ?>
                             </ul>
                         </nav>
                     </div>
@@ -928,33 +437,33 @@
                         <div class="product productModal" id="productModal">
 
                             <div class="zoom" onmousemove="zoom(event)"
-                                style="background-image: url(../assets/images/products/product-single-img-1.jpg)">
+                                style="background-image: url(../assets/img/products/product-single-img-1.jpg)">
                                 <!-- img -->
-                                <img src="../assets/images/products/product-single-img-1.jpg" alt="">
+                                <img src="../assets/img/products/product-single-img-1.jpg" alt="">
                             </div>
 
 
                             <div>
                                 <div class="zoom" onmousemove="zoom(event)"
-                                    style="background-image: url(../assets/images/products/product-single-img-2.jpg)">
+                                    style="background-image: url(../assets/img/products/product-single-img-2.jpg)">
                                     <!-- img -->
-                                    <img src="../assets/images/products/product-single-img-2.jpg" alt="">
+                                    <img src="../assets/img/products/product-single-img-2.jpg" alt="">
                                 </div>
 
                             </div>
                             <div>
                                 <div class="zoom" onmousemove="zoom(event)"
-                                    style="background-image: url(../assets/images/products/product-single-img-3.jpg)">
+                                    style="background-image: url(../assets/img/products/product-single-img-3.jpg)">
                                     <!-- img -->
-                                    <img src="../assets/images/products/product-single-img-3.jpg" alt="">
+                                    <img src="../assets/img/products/product-single-img-3.jpg" alt="">
                                 </div>
 
                             </div>
                             <div>
                                 <div class="zoom" onmousemove="zoom(event)"
-                                    style="background-image: url(../assets/images/products/product-single-img-4.jpg)">
+                                    style="background-image: url(../assets/img/products/product-single-img-4.jpg)">
                                     <!-- img -->
-                                    <img src="../assets/images/products/product-single-img-4.jpg" alt="">
+                                    <img src="../assets/img/products/product-single-img-4.jpg" alt="">
                                 </div>
                             </div>
 
@@ -965,25 +474,25 @@
                                 <div class="col-3">
                                     <div class="thumbnails-img">
                                         <!-- img -->
-                                        <img src="../assets/images/products/product-single-img-1.jpg" alt="">
+                                        <img src="../assets/img/products/product-single-img-1.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="thumbnails-img">
                                         <!-- img -->
-                                        <img src="../assets/images/products/product-single-img-2.jpg" alt="">
+                                        <img src="../assets/img/products/product-single-img-2.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="thumbnails-img">
                                         <!-- img -->
-                                        <img src="../assets/images/products/product-single-img-3.jpg" alt="">
+                                        <img src="../assets/img/products/product-single-img-3.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="thumbnails-img">
                                         <!-- img -->
-                                        <img src="../assets/images/products/product-single-img-4.jpg" alt="">
+                                        <img src="../assets/img/products/product-single-img-4.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -1059,8 +568,6 @@
                                                         hoy)</span></small></td>
 
                                         </tr>
-
-
                                     </tbody>
                                 </table>
 

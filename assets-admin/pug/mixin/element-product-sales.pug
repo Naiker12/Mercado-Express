@@ -1,0 +1,51 @@
+//- =====================
+//-  product costing
+//- =====================
+-
+   var PRODUCT_COSTING= 
+      [
+         {
+            name:"Total Sales",
+            price:"₹98,459",
+            iconName:"activity",
+            subTitle:"We have sale +18.2k this week.",
+            status:"primary-light",
+         },
+         {
+            name:"Total Visitors",
+            price:"54,156",
+            iconName:"people",
+            subTitle:"We have total +3.5k visitors this week.",
+            status:"warning-light",
+         },
+         {
+            name:"Total Orders",
+            price:"5,125",
+            iconName:"task-square",
+            subTitle:"We have total +5k orders this week.",
+            status:"light", 
+         },
+         {
+            name:"Refunded",
+            price:"₹20,000",
+            iconName:"money-recive",
+            subTitle:"We got +66k refund this week.",
+            status: "danger-light", 
+         },
+      ]
+
+//- ==================
+//- product-sales  
+//- ==================
+mixin  product-cost(data)
+    each item in data
+        ul(class="product-costing")
+            li(class="product-cost")
+                div(class=`product-icon bg-${item.status}`)
+                    svg
+                        use(href=`../assets/svg/icon-sprite.svg#${item.iconName}`)
+                div
+                    span(class="f-w-500 f-14 mb-0")=item.name
+                    h2(class="f-w-600")=item.price 
+            li 
+                span(class="f-light f-14 f-w-500")=item.subTitle

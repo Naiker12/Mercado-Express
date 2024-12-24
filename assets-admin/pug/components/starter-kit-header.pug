@@ -1,0 +1,220 @@
+
+// Page Header Start
+.page-header
+  .header-wrapper.row.m-0
+    form(action='#', method='get').form-inline.search-full.col
+      .form-group.w-100
+        .Typeahead.Typeahead--twitterUsers
+          .u-posRelative
+            input.demo-input.Typeahead-input.form-control-plaintext.w-100(type='text' placeholder='Search Riho ..' name='q' title='' autofocus)
+            .spinner-border.Typeahead-spinner(role='status')
+              span.sr-only Loading... 
+            i(data-feather='x').close-search
+          .Typeahead-menu 
+    .header-logo-wrapper.col-auto.p-0 
+      .logo-wrapper  
+        a(href='../template/index.html')
+          img.img-fluid.for-light(src='../assets/images/logo/logo_dark.png', alt='')
+          img.img-fluid.for-dark(src='../assets/images/logo/logo.png', alt='')
+      .toggle-sidebar  
+        i.status_toggle.middle(data-feather='align-center').sidebar-toggle
+    .left-header.col-xxl-5.col-xl-6.col-lg-5.col-md-4.col-sm-3.p-0
+        div  
+            a(href="#").toggle-sidebar  
+                i.iconly-Category.icli  
+            div(class="d-flex align-items-center gap-2 ")
+                h4(class="f-w-600") Welcome Alex
+                img(src="../assets/images/hand.gif" class="mt-0" alt="hand-gif")
+        div(class="welcome-content d-xl-block d-none")
+            span(class="text-truncate col-12") Here’s what’s happening with your store today. 
+    .nav-right.col-xxl-7.col-xl-6.col-md-7.col-8.pull-right.right-header.p-0.ms-auto
+      ul.nav-menus 
+        li.d-md-block.d-none 
+          div.form.search-form.mb-0 
+            .input-group 
+                span(class="input-icon")
+                    svg 
+                      use(href='../assets/svg/icon-sprite.svg#search-header')
+                    input(type='search' placeholder='Search' class="w-100")
+        li.d-md-none.d-block 
+          div.form.search-form.mb-0
+            .input-group 
+              span(class="input-show")  
+                svg#searchIcon
+                  use(href='../assets/svg/icon-sprite.svg#search-header')
+                #searchInput
+                  input(type='search' placeholder='Search')
+        li.onhover-dropdown
+          svg
+            use(href='../assets/svg/icon-sprite.svg#star')
+          .onhover-show-div.bookmark-flip
+            .flip-card
+              .flip-card-inner
+                .front
+                  h6.f-18.mb-0.dropdown-title Bookmark
+                  ul.bookmark-dropdown
+                    li
+                      .row
+                        .col-4.text-center
+                          .bookmark-content
+                            .bookmark-icon
+                              i(data-feather='file-text')
+                            span Forms
+                        .col-4.text-center
+                          .bookmark-content
+                            .bookmark-icon
+                              i(data-feather='user')
+                            span Profile
+                        .col-4.text-center
+                          .bookmark-content
+                            .bookmark-icon
+                              i(data-feather='server')
+                            span Tables
+                    li.text-center
+                      a.flip-btn#flip-btn.f-w-700(href="javascript:void(0)") Add New Bookmark
+                .back
+                  ul
+                    li
+                      .bookmark-dropdown.flip-back-content
+                        input(type='text' placeholder='search...')
+                    li
+                      a.f-w-700.d-block.flip-back#flip-back(href="javascript:void(0)")
+                        | Back
+        li 
+          .mode
+            i(data-feather='moon' class="moon") 
+        li.onhover-dropdown.notification-down
+          .notification-box 
+            svg 
+              use(href='../assets/svg/icon-sprite.svg#notification-header')
+            span.badge.rounded-pill.badge-secondary 4 
+          .onhover-show-div.notification-dropdown 
+            .card.mb-0 
+              .card-header
+                div.common-space 
+                  h4.text-start.f-w-600 Notitications
+                  div
+                    span 4 New
+              .card-body
+                div.notitications-bar
+                  ul#pills-tab.nav.nav-pills.nav-primary.p-0(role='tablist')
+                    li.nav-item.p-0  
+                        a#pills-aboutus-tab.nav-link.active(data-bs-toggle='pill' href='#pills-aboutus' role='tab' aria-controls='pills-aboutus' aria-selected='true')
+                            | All(3)
+                    li.nav-item.p-0 
+                        a#pills-blog-tab.nav-link(data-bs-toggle='pill' href='#pills-blog' role='tab' aria-controls='pills-blog' aria-selected='false') 
+                            | Messages
+                    li.nav-item.p-0 
+                        a#pills-contactus-tab.nav-link(data-bs-toggle='pill' href='#pills-contactus' role='tab' aria-controls='pills-contactus' aria-selected='false') 
+                            | Cart  
+                  #pills-tabContent.tab-content
+                    #pills-aboutus.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-aboutus-tab')
+                      div(class="user-message") 
+                        .cart-dropdown.notification-all
+                          ul
+                            li.pr-0.pl-0.pb-3.pt-3
+                              .media
+                                img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/receiver-img.jpg', alt='')
+                                .media-body
+                                  a(href="../template/product.html" class="f-light f-w-500") Men Blue T-Shirt
+                                  .qty-box 
+                                    .input-group  
+                                      span.input-group-prepend
+                                        button.btn.quantity-left-minus(type='button' data-type='minus' data-field='')
+                                          | - 
+                                      input.form-control.input-number(type='text' name='quantity' value='1')
+                                      span.input-group-prepend
+                                        button.btn.quantity-right-plus(type='button' data-type='plus' data-field='')
+                                          | +
+                                  h6.font-primary $695.00
+                                .close-circle
+                                  a.bg-danger(href='#')
+                                    i(data-feather='x')
+                        +user-alerts(USER_ALERTS)  
+                    #pills-blog.tab-pane.fade(role='tabpanel' aria-labelledby='pills-blog-tab')
+                        div(class="notification-card") 
+                          +notification(NOTIFICATION_BAR)
+                    #pills-contactus.tab-pane.fade(role='tabpanel' aria-labelledby='pills-contactus-tab')
+                      .cart-dropdown.mt-4 
+                        ul
+                          li.pr-0.pl-0.pb-3
+                            .media
+                              img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/cart-img.jpg', alt='')
+                              .media-body
+                                a(href="../template/product.html" class="f-light f-w-500") Furniture Chair for Home
+                                .qty-box
+                                  .input-group 
+                                    span.input-group-prepend
+                                      button.btn.quantity-left-minus(type='button' data-type='minus' data-field='')
+                                        | -
+                                    input.form-control.input-number(type='text' name='quantity' value='1')
+                                    span.input-group-prepend
+                                      button.btn.quantity-right-plus(type='button' data-type='plus' data-field='')
+                                        | +
+
+                                h6.font-primary $500
+                              .close-circle
+                                a.bg-danger(href='#')
+                                  i(data-feather='x')
+                          li.pr-0.pl-0.pb-3.pt-3 
+                            .media
+                              img.img-fluid.b-r-5.me-3.img-60(src='../assets/images/other-images/receiver-img.jpg', alt='')
+                              .media-body
+                                a(href="../template/product.html" class="f-light f-w-500") Men Cotton Blend Blue T-Shirt
+                                .qty-box 
+                                  .input-group 
+                                    span.input-group-prepend
+                                      button.btn.quantity-left-minus(type='button' data-type='minus' data-field='')
+                                        | - 
+                                    input.form-control.input-number(type='text' name='quantity' value='1')
+                                    span.input-group-prepend
+                                      button.btn.quantity-right-plus(type='button' data-type='plus' data-field='')
+                                        | +
+                                h6.font-primary $695.00
+                              .close-circle
+                                a.bg-danger(href='#')
+                                  i(data-feather='x')
+                          li.mb-3.total
+                            a(href="../template/checkout.html")
+                              h6.mb-0 
+                                | Order Total :
+                                span.f-right $1195.00  
+                    .card-footer.pb-0.pr-0.pl-0 
+                      div.text-center  
+                        a.f-w-700(href="../template/private-chat.html")
+                          button.btn.btn-primary(type='button' title='btn btn-primary') Check all
+        li.profile-nav.onhover-dropdown 
+          .media.profile-media
+            img.b-r-10(src='../assets/images/dashboard/profile.png', alt='')
+            .media-body.d-xxl-block.d-none.box-col-none
+              .d-flex.align-items-center.gap-2 
+                span Alex Mora 
+                i.middle.fa.fa-angle-down 
+              p.mb-0.font-roboto Admin
+                //- i.middle.fa.fa-angle-down
+          ul.profile-dropdown.onhover-show-div
+            li
+              a(href='../template/user-profile.html')
+                i(data-feather='user')
+                span My Profile
+            li
+              a(href='../template/letter-box.html')
+                i(data-feather='mail')
+                span Inbox
+            li 
+              a(href='../template/edit-profile.html') 
+                i(data-feather='settings')
+                span Settings
+            li
+              a(href='../template/login.html').btn.btn-pill.btn-outline-primary.btn-sm Log Out
+    
+    script.result-template(type='text/x-handlebars-template').
+      <div class="ProfileCard u-cf">                        
+      <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+      <div class="ProfileCard-details">
+      <div class="ProfileCard-realName">{{name}}</div>
+      </div>
+      </div>
+    script.empty-template(type='text/x-handlebars-template').
+      <div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div>
+// Page Header Ends                              

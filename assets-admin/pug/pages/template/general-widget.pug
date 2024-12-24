@@ -1,0 +1,280 @@
+- var theme_customizer      = true; 
+- var apexmoment            = true;
+- var apex                  = true;
+- var general_widget        = true;  
+- var sidebar               = true;
+- var scrollbar             = true;
+- var coustom_calendar      = true;
+- var height_equal          = true;
+
+   
+ 
+//- all mixin  
+include ../../mixin/mixin
+ 
+doctype html
+html(lang='en')
+  include ../../components/header-files
+  body
+    include ../../components/loader
+    include ../../components/taptop
+    // page-wrapper Start
+    #pageWrapper.page-wrapper.compact-wrapper
+      include ../../components/header
+      // Page Body Start
+      .page-body-wrapper
+        include ../../components/sidebar
+        .page-body
+          .container-fluid
+            .page-title
+              .row
+                .col-6
+                  h4
+                    | General
+                .col-6 
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html')                                        
+                        svg.stroke-icon
+                          use(href='../assets/svg/icon-sprite.svg#stroke-home')
+                    li.breadcrumb-item Widgets 
+                    li.breadcrumb-item.active General
+          // Container-fluid starts
+          .container-fluid 
+            .row.size-column
+              .col-xxl-9.box-col-12 
+                .row 
+                  .col-xl-3.col-sm-6 
+                    .card.o-hidden.small-widget
+                      .card-body(class="total-project border-b-primary border-2")
+                        span(class="f-light f-w-500 f-14") Total Project
+                        div(class="project-details")
+                          div(class="project-counter")
+                            h2(class="f-w-600") 1,523
+                            span(class="f-12 f-w-400") (This month)
+                          div(class="product-sub bg-primary-light") 
+                            svg(class="invoice-icon")
+                              use(href="../assets/svg/icon-sprite.svg#color-swatch")
+                        ul.bubbles
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                  .col-xl-3.col-sm-6
+                    .card.o-hidden.small-widget
+                      .card-body(class="total-Progress border-b-warning border-2") 
+                        span(class="f-light f-w-500 f-14") In Progress
+                        div(class="project-details")
+                          div(class="project-counter")
+                            h2(class="f-w-600") 836 
+                            span(class="f-12 f-w-400") (This month) 
+                          div(class="product-sub bg-warning-light") 
+                            svg(class="invoice-icon")
+                              use(href="../assets/svg/icon-sprite.svg#tick-circle")
+                        ul.bubbles 
+                          li.bubble
+                          li.bubble 
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                  .col-xl-3.col-sm-6
+                    .card.o-hidden.small-widget
+                      .card-body(class="total-Complete border-b-secondary border-2")
+                        span(class="f-light f-w-500 f-14") Complete
+                        div(class="project-details")
+                          div(class="project-counter")
+                            h2(class="f-w-600") 475
+                            span(class="f-12 f-w-400") (This month) 
+                          div(class="product-sub bg-secondary-light") 
+                            svg(class="invoice-icon")
+                              use(href="../assets/svg/icon-sprite.svg#add-square")
+                        ul.bubbles 
+                          li.bubble 
+                          li.bubble
+                          li.bubble
+                          li.bubble 
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                  .col-xl-3.col-sm-6
+                    .card.o-hidden.small-widget
+                      .card-body(class="total-upcoming border-2")
+                        span(class="f-light f-w-500 f-14") Upcoming
+                        div(class="project-details") 
+                          div(class="project-counter")
+                            h2(class="f-w-600") 189
+                            span(class="f-12 f-w-400") (This month) 
+                          div(class="product-sub bg-light-light") 
+                            svg(class="invoice-icon")
+                              use(href="../assets/svg/icon-sprite.svg#edit-2")
+                        ul.bubbles 
+                          li.bubble 
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                          li.bubble
+                  .col-xl-4.col-sm-6
+                    .card 
+                      .card-body 
+                        +product-cost(PRODUCT_COSTING)
+                  .col-xl-4.col-sm-6
+                    .card 
+                      .card-header.card-no-border.total-revenue.pb-0
+                        h4 User Visits by Day
+                      .card-body.pt-0.pb-0 
+                        .user-visitsCharts 
+                          #visitswidgetCharts
+                      .card-footer.p-0 
+                        div(class="common-space px-3 py-2")
+                          div 
+                            a(href="index.html" class="f-w-600 f-10 ") Most Visited Day
+                            span(class="f-light f-w-400 f-10 d-block") Total 59.6k visits on Sunday 
+                          div(class='visited-dropdown')
+                            svg.mb-0 
+                              use(href='../assets/svg/icon-sprite.svg#arrow-down')
+                  .col-xl-4.col-lg-6
+                    .row 
+                      .col-md-12.col-sm-6
+                        .card(class="boost-up-card overflow-hidden")
+                          div.p-4 
+                            div(class="boostup-name row")
+                              h6(class="text-white f-28 f-w-700 mb-2 z-1 ") Boost up your sale 
+                              p(class="text-white f-14 f-w-500 col-9 line-clamp") by upgrading your increase sale by 30% more.
+                            div(class="img-boostup")
+                              img(src='../assets/images/dashboard-3/boostup1.png' alt='boostup' class="img-boostup-img-1" )
+                              //- img(src='../assets/images/dashboard-3/boostup2.png' alt='boostup' class='img-boostup-img-2')
+                            div.btn-showcase.text-start 
+                              button.btn.btn-pill.btn-outline-light-2x.b-r-8(type='button') Upgrade Now
+                      .col-md-12.col-sm-6
+                        .card 
+                          .card-header.card-no-border.total-revenue.pb-0
+                            h4 Deliveries
+                            div(class="icon-menu-header")
+                              svg
+                                use(href="../assets/svg/icon-sprite.svg#more-horizontal")
+                          .card-body.pt-0
+                            div(class="table-responsive custom-scrollbar deliveries-percentage")
+                              table(class="percentage-data w-100")
+                                thead
+                                  tr
+                                    th(scope='col' class="f-light") Particular
+                                    th(scope='col' class="f-light text-end") Percentage
+                                tbody
+                                  tr
+                                    td(class="f-w-400 f-10") 
+                                      a(class="line-clamp" href='cart.html') On Time Delivery
+                                    td
+                                      div(class="progress-value").d-flex.gap-2.align-items-center
+                                        .progress
+                                          .progress-bar.bg-primary(role='progressbar', style='width: 75%  ', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                                        span 80%
+                                  tr
+                                    td(class="f-w-400 f-10") 
+                                     a(class="line-clamp" href="cart.html") Delayed Delivery
+                                    td
+                                      div(class="progress-value").d-flex.gap-2.align-items-center
+                                        .progress
+                                          .progress-bar.bg-primary(role='progressbar', style='width: 15%', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')
+                                        span 15% 
+                  .col-xl-6.col-lg-6
+                    .card  
+                      .card-header.card-no-border.total-revenue 
+                        h4 Time Line 
+                      .card-body.pt-0.overflow-auto.theme-scrollbar.custom-scrollbar
+                        .timeline-calendar.custom-scrollbar
+                          div#calendar-container(class="custom-calendar")
+                            div#calendar(class="time-line")
+                  .col-xl-6
+                    .card.height-equal
+                      .card-header.total-revenue
+                          h4 Sales Chart 
+                          div.sales-chart-dropdown-select
+                            .card-header-right-icon 
+                              .dropdown
+                                button#dropdownMenuButtonmenu.btn.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                                  | Today
+                                .dropdown-menu.dropdown-menu-end(aria-labelledby='dropdownMenuButtonmenu')
+                                  span.dropdown-item Last Month
+                                  span.dropdown-item Last Week
+                                  span.dropdown-item Last Day 
+                      .card-body.p-0
+                        .sales-wrapper
+                          #saleschart
+              .col-xl-3.d-xxl-block.d-none.box-col-none 
+                .col-xl-12(class="special-Offer-banner")
+                  .card 
+                    div(class="special-Offer img-fluid")
+                      div(class="offer-contain") 
+                        h4 Today’s Special Offer 
+                        p.mb-0.mt-2 You can flat get 20% off on your next pro version 
+                        p.text-align-center if your sale break your last record.
+                .col-xl-12 
+                  .card 
+                    .card-body(class="new-product")
+                        div(class="product-cost")
+                          div(class="add-product")
+                            div(class='product-icon bg-light-primary')
+                              svg
+                                use(href="../assets/svg/icon-sprite.svg#box-add")
+                            h6 Add New Product
+                          div(class='product-icon')
+                            svg
+                              use(href="../assets/svg/icon-sprite.svg#arrow-down")
+                .col-xl-12 
+                  .card
+                    .card-body(class="new-product")
+                        div(class="product-cost")
+                          div(class="add-product")
+                            div(class='product-icon bg-light-primary')
+                              svg
+                                use(href="../assets/svg/icon-sprite.svg#receipt-disscount")
+                            h6 Add Disscount 
+                          div(class='product-icon')
+                            svg  
+                              use(href="../assets/svg/icon-sprite.svg#arrow-down") 
+                .col-xl-12 
+                    .row
+                      .col-xl-12.col-md-6
+                        .card
+                          .card-body
+                            div.total-revenue.mb-2
+                              span Total Revenue 
+                              a(href="index.html") View Report
+                            h4.f-w-600 ₹97,250.89 
+                            div.total-chart 
+                                .data-grow.d-flex.gap-2
+                                  i.font-primary(data-feather="arrow-up-right")
+                                  span(class="f-15 f-w-500") 60.00% from last year 
+                                .total-revenue-chart 
+                                   #revenueWidget
+                      .col-xl-12.col-md-6 
+                        .card 
+                          .card-body   
+                            div.total-revenue.mb-2  
+                              span Total Order 
+                              a(href="index.html") View Report
+                            h4.f-w-600 35,452  
+                            div.total-chart 
+                                .data-grow.d-flex.gap-2
+                                  i.font-secondary(data-feather="arrow-down-left")
+                                  span(class="f-15 f-w-500") 15.00% from last week
+                                .total-order 
+                                  #totalOrderWidget 
+          // Container-fluid Ends 
+        include ../../components/footer
+    include ../../components/footer-files

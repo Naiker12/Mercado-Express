@@ -1,0 +1,64 @@
+
+//- =====================
+//- team-activity
+//- =====================
+-
+    var TEAM_ACTIVITY= 
+        {
+            body:[
+                {
+                    image:'50.png',
+                    userName:'Floyd Miles',
+                    postTime:'5 min ago',
+                    subTitle:'Floyd has moved to the warehouse.',
+                },
+                { 
+                    image:'51.png',
+                    userName:'Ralph Edwards',
+                    postTime:'6 min ago',
+                    subTitle:'Ralph has solved Mr.williams project.',
+                },
+                {
+                    image: '33.png',
+                    userName:'Esther Howard',
+                    postTime:'10 min ago',
+                    subTitle:'Esther has changed his to active, now.',
+                },
+                 {
+                    image: '52.png',
+                    userName:'Jacob Jones',
+                    postTime:'11 min ago',
+                    subTitle:'Jacob has make changes in sold it.',
+                },
+                {
+                    image: '53.png',
+                    userName:'Theresa Webb',
+                    postTime:'12 min ago',
+                    subTitle:'Theresa has complete old task and  new one.',
+                },
+                {
+                    image: '54.png',
+                    userName:'Annette Black',
+                    postTime:'12 min ago',
+                    subTitle:'Annette has send all the stock to department.',
+                }, 
+            ]
+        }
+//- ==================
+//- Activity-log-table
+//- ==================
+table(class='order-table overflow-hidden project-table w-100 activity-log')
+    tbody
+        each bodyData in TEAM_ACTIVITY.body 
+            tr
+                td
+                    div(class="team-activity")
+                        div(class="activity-data").d-flex.align-items-center.gap-3
+                            div(class="common-space gap-2 ") 
+                                div(class="user-activity me-3")
+                                    img(class="rounded-circle p-1 img-fluid me-3 img-50" src=`../assets/images/user/${bodyData.image}` alt=`user`)
+                                    a(class="f-10 f-w-500 username" href="edit-profile.html")=bodyData.userName
+                                div(class="activity-time")
+                                    span(class="f-light f-w-500 f-10")=bodyData.postTime
+                            div(class="subtitle") 
+                                p(class='f-w-400 f-10')=bodyData.subTitle  
