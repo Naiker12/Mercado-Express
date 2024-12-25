@@ -32,12 +32,18 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/vendors/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/vendors/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/vendors/animate.css">
+
+    <link rel="stylesheet" href="<?php echo BASE_URL ;?>assets/css/fontawesome.min.css">
+
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/vendors/bootstrap.css">
     <!-- App css-->
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/style.css">
     <link id="color" rel="stylesheet" href="<?php echo BASE_URL ;?>assets-admin/css/color-1.css" media="screen">
+
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL . 'assets/DataTables/datatables.min.css'; ?>">
+
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/responsive.css">
 </head>
@@ -611,25 +617,6 @@
                                     </svg><span class="lan-6">Widgets</span></a>
                                 <ul class="sidebar-submenu">
                                     <li><a href="general-widget.html">General</a></li>
-                                    <li><a href="chart-widget.html">Gráfico</a></li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-list">
-                                <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
-                                    <svg class="stroke-icon">
-                                        <use
-                                            href="<?php echo BASE_URL ;?>assets-admin/svg/icon-sprite.svg#stroke-layout">
-                                        </use>
-                                    </svg>
-                                    <svg class="fill-icon">
-                                        <use href="<?php echo BASE_URL ;?>assets-admin/svg/icon-sprite.svg#fill-layout">
-                                        </use>
-                                    </svg><span class="lan-7">Diseño de Páginas</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="box-layout.html">Caja</a></li>
-                                    <li><a href="layout-rtl.html">RTL</a></li>
-                                    <li><a href="layout-dark.html">Diseño Oscuro</a></li>
-                                    <li><a href="hide-on-scroll.html">Ocultar Navegación al Desplazar</a></li>
                                 </ul>
                             </li>
                             <li class="sidebar-main-title">
@@ -682,7 +669,7 @@
                                 <ul class="sidebar-submenu">
                                     <li><a href="add-products.html">Agregar Productos</a></li>
                                     <li><a href="product.html">Producto</a></li>
-                                    <li><a href="category.html">Página de Categorías</a></li>
+                                    <li><a href="<?php echo BASE_URL . 'categorias/index'; ?>">Página de Categorías</a></li>
                                     <li><a href="product-page.html">Página de Productos</a></li>
                                     <li><a href="list-products.html">Lista de Productos</a></li>
                                     <li><a href="payment-details.html">Detalles de Pago</a></li>
