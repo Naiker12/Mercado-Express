@@ -1,5 +1,5 @@
 <?php
-class Perfil extends Controller
+class Buzon extends Controller
 {
     public function __construct()
     {
@@ -12,8 +12,8 @@ class Perfil extends Controller
     }
     public function index()
     {
-        $data['title'] = 'Registrar un usuario';
-        $this->views->getView('admin/perfil', "index", $data);
+        $data['title'] = 'Crear tienda';
+        $this->views->getView('admin/buzon', "index", $data);
     }
    
 }

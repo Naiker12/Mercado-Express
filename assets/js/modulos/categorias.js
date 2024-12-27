@@ -61,31 +61,34 @@ document.addEventListener("DOMContentLoaded", function () {
 function eliminarCat(idCat) {
     Swal.fire({
         title: "Aviso?",
-        text: "Esta seguro de eliminar el registro!",
-        icon: "warning",
+        text: "¿Está seguro de eliminar el registro?",
+        iconHtml: '<i class="fa-solid fa-exclamation-triangle"></i>', // Icono de Font Awesome
+        customClass: {
+            icon: 'text-warning' // Cambiar el color del ícono
+        },
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Si, Eliminar!",
+        confirmButtonText: "Sí, eliminar!",
     }).then((result) => {
         if (result.isConfirmed) {
             const url = base_url + "categorias/delete/" + idCat;
             const http = new XMLHttpRequest();
             http.open("GET", url, true);
             http.send();
-            http.onreadystatechange = function() {
+            http.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    console.log(this.responseText);
                     const res = JSON.parse(this.responseText);
-                    if (res.icono == "success") {
+                    if (res.icono === "success") {
                         tblCategorias.ajax.reload();
                     }
-                    Swal.fire("Aviso?", res.msg.toUpperCase(), res.icono);
+                    Swal.fire("Aviso", res.msg.toUpperCase(), '<i class="fa-solid fa-check-circle"></i>'); // Cambiar ícono según respuesta
                 }
-            }
+            };
         }
     });
 }
+
 
 //EDITAR
 function editCat(idCat) {

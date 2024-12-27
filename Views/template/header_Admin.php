@@ -33,8 +33,6 @@
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/vendors/scrollbar.css">
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/vendors/animate.css">
 
-    <link rel="stylesheet" href="<?php echo BASE_URL ;?>assets/css/fontawesome.min.css">
-
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL ;?>assets-admin/css/vendors/bootstrap.css">
@@ -600,7 +598,7 @@
                                     </svg><span class="lan-3">Panel de Control</span></a>
                                 <ul class="sidebar-submenu">
                                     <li><a href="index.html">Predeterminado</a></li>
-                                    <li><a href="dashboard-02.html">Comercio Electrónico</a></li>
+                                    <li><a href="dashboard-02.html">Ecommerce</a></li>
                                     <li><a href="dashboard-03.html">Proyecto</a></li>
                                 </ul>
                             </li>
@@ -636,10 +634,9 @@
                                         <use
                                             href="<?php echo BASE_URL ;?>assets-admin/svg/icon-sprite.svg#fill-project">
                                         </use>
-                                    </svg><span>Proyecto</span></a>
+                                    </svg><span>Tiendas</span></a>
                                 <ul class="sidebar-submenu">
-                                    <li><a href="projects.html">Lista de Proyectos</a></li>
-                                    <li><a href="projectcreate.html">Crear Nuevo</a></li>
+                                    <li><a href="<?php echo BASE_URL . 'tienda/index'; ?>">Crear</a></li>
                                 </ul>
                             </li>
                             <li class="sidebar-list">
@@ -652,7 +649,7 @@
                                     <svg class="fill-icon">
                                         <use href="<?php echo BASE_URL ;?>assets-admin/svg/icon-sprite.svg#fill-file">
                                         </use>
-                                    </svg><span>Administrador de Archivos</span></a>
+                                    </svg><span>Archivos</span></a>
                             </li>
                             <li class="sidebar-list">
                                 <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -665,13 +662,13 @@
                                         <use
                                             href="<?php echo BASE_URL ;?>assets-admin/svg/icon-sprite.svg#fill-ecommerce">
                                         </use>
-                                    </svg><span>Comercio Electrónico</span></a>
+                                    </svg><span>Ecommerce</span></a>
                                 <ul class="sidebar-submenu">
-                                    <li><a href="add-products.html">Agregar Productos</a></li>
+                                    <li><a href="<?php echo BASE_URL . 'productos/registro'; ?>">Agregar Productos</a></li>
                                     <li><a href="product.html">Producto</a></li>
-                                    <li><a href="<?php echo BASE_URL . 'categorias/index'; ?>">Página de Categorías</a></li>
-                                    <li><a href="product-page.html">Página de Productos</a></li>
-                                    <li><a href="list-products.html">Lista de Productos</a></li>
+                                    <li><a href="<?php echo BASE_URL . 'categorias/index'; ?>">Categorías</a></li>
+                                    <li><a href="product-page.html">Productos</a></li>
+                                    <li><a href="<?php echo BASE_URL . 'productos/index'; ?>">Lista de Productos</a></li>
                                     <li><a href="payment-details.html">Detalles de Pago</a></li>
                                     <li><a href="order-history.html">Historial de Pedidos</a></li>
                                     <li><a href="cart.html">Carrito</a></li>
@@ -681,7 +678,7 @@
                             </li>
                             <li class="sidebar-list">
                                 <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title link-nav"
-                                    href="letter-box.html">
+                                    href="<?php echo BASE_URL . 'buzon/index'; ?>">
                                     <svg class="stroke-icon">
                                         <use
                                             href="<?php echo BASE_URL ;?>assets-admin/svg/icon-sprite.svg#stroke-email">
@@ -691,10 +688,6 @@
                                         <use href="<?php echo BASE_URL ;?>assets-admin/svg/icon-sprite.svg#fill-email">
                                         </use>
                                     </svg><span>Buzón</span></a>
-                                <ul class="sidebar-submenu">
-                                    <li><a href="email-application.html">Aplicación de Correo</a></li>
-                                    <li><a href="email-compose.html">Redactar Correo</a></li>
-                                </ul>
                             </li>
                             <li class="sidebar-list">
                                 <i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
@@ -721,8 +714,7 @@
                                         </use>
                                     </svg><span>Usuarios</span></a>
                                 <ul class="sidebar-submenu">
-                                    <li><a href="user-profile.html">Perfil de Usuario</a></li>
-                                    <li><a href="edit-profile.html">Editar Usuario</a></li>
+                                    <li><a href="<?php echo BASE_URL . 'perfil/index'; ?>">Usuarios</a></li>
                                 </ul>
                             </li>
 
